@@ -1,0 +1,13 @@
+#id-page-about {
+  .page-offset {
+    position: relative;
+    .btn-up {
+      position: absolute;
+      right: var(--offset20);
+      bottom: 0;
+    }
+  }
+  .about-page {
+    margin-bottom: var(--top-offset100);
+  }
+}

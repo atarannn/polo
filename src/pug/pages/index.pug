@@ -1,0 +1,102 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'home'
+    var id_page = 'home-page'
+    var class_page = 'home'
+
+block meta
+  title= 'Главная'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/form.js')
+  script(defer src='./assets/scripts/hover-animation.js')
+  script(defer src='./assets/scripts/scroll-animation.js')
+
+block content
+  section.main.section-offset
+    .main-video
+      video(autoplay="" loop="" muted="" playsinline="" preload="none" width="100%" height="100%")
+        source(src="./assets/images/home/section-1/main-video.mp4" type="video/mp4")
+        source(src="./assets/images/home/section-1/main-video.webm" type="video/webm" media="(max-width:1180px)")
+      .main-text-wrapper
+        .main-text
+          p строим не дома,
+        .main-text
+          a(href="#about").btn-down
+            <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 21.1786L11.0294 30.5M11.0294 30.5L20.5588 21.1786M11.0294 30.5C11.0294 24.9762 11.0294 12.7548 11.0294 8.05952C11.0294 2.19048 17.0294 1.5 18.4412 1.5C19.5706 1.5 24.6176 1.5 28.5 1.5" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          p а стиль жизни!
+        include ../components/social-networks/social-networks.pug
+  section#about.about.section-offset.section-top-offset
+    .about-left.card-style.js-hover-card-animation
+      .about-content
+        .subtitle Архитектура домов прекрасно сочетается с естественным природным ландшафтом. Развитая инфраструктура и полная самодостаточность комплекса вдохновляют на активную насыщенную жизнь.
+        a(href="#").btn-circle.btn-text
+          span Узнать больше
+        .title Концепция pоlо vilas
+    .about-right.card-style.js-hover-card-animation
+      .about-content
+        .title Про проект
+        a(href="#").btn-circle.btn-text
+          span Узнать больше
+        .subtitle Жилой комплекс клубного типа c закрытой территорией, развитой инфраструктурой и полной самодостаточностью комплекса вдохновляют на активную насыщенную жизнь.
+  section.images-section.section-offset.section-top-offset
+    .images-section-wrapper
+      .images-section-left
+        img(src="./assets/images/home/section-3/1.png").img
+      .images-section-right
+        img(src="./assets/images/home/section-3/2.png").img
+        img(src="./assets/images/home/section-3/3.svg").logo-svg
+      img(src="./assets/images/home/section-3/4.svg").left-svg
+      img(src="./assets/images/home/section-3/5.svg").right-svg
+  section.apartments-section
+    .apartments-section-wrapper
+      img(src="./assets/images/home/section-4/bg.svg").bg-svg
+      .apartments-section-left
+        img(src="./assets/images/home/section-4/1.png")
+      .apartments-section-center
+        h4.title Планировки
+        p.text Всего 3 типа домов, в домах 3-4 спальни, 3 санузла, паркинг у каждого дома на 1 или 2 машины. У всех домов есть задний двор (земельный участок или собственная терраса).
+        a(href="#").btn.btn-text.orange-btn
+          span Выбрать дом
+      .apartments-section-right
+        img(src="./assets/images/home/section-4/2.png")
+  section#about-2.about.section-offset
+    .about-left.card-style.js-hover-animation
+      img(src="./assets/images/home/section-5/1.png")
+      .title Галерея комплекса
+      .about-left-hover
+        a(href="#").btn-circle.btn-text
+          span Узнать больше
+        .img
+          img(src="./assets/images/home/section-5/3.png").left
+          img(src="./assets/images/home/section-5/4.png").right
+    .about-right.card-style.js-hover-card-animation
+      .about-content
+        .title Девелопер проекта
+        a(href="#").btn-circle.btn-text
+          span Узнать больше
+        .subtitle Работаем с 2017 года. Специализируемся на малоэтажном строительстве, самый крупный и "старый" застройщик малоэтажного строительства. Первые в Грузии предложили форматы домов типа - таунхаус.
+
+
+
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

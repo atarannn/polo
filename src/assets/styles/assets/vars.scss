@@ -1,0 +1,54 @@
+$default-font: "Gilroy-Medium", sans-serif;
+$default-font2: "Gilroy-Regular", sans-serif;
+$default-font3: "Gilroy-Light", sans-serif;
+
+$wc: #fff;
+$bc: #000;
+$orange-light: rgba(250, 126, 38, 1);
+$light: #E3EBF3;
+$dark: #1A1E21;
+$grey: #6C7A88;
+
+
+:root {
+  --border-radius: 60px;
+  --border-radius-2: 40px;
+  --border-radius-3: 20px;
+
+  --top-offset20: 20px;
+  --top-offset40: 40px;
+  --top-offset100: 100px;
+
+  --offset20: 20px;
+  --offset32: 32px;
+  --offset50: 50px;
+  --offset60: 60px;
+  --offset140: 140px;
+  --offset210: 210px;
+
+  --heafer-h: 70px;
+  --header-font14: 14px;
+  --header-btn-h: 46px;
+  --header-btn-w: 160px;
+  --logo-h: 42px;
+
+  --font14: 14px;
+  --font18: 18px;
+  --font20: 20px;
+  --font24: 24px;
+  --font28: 28px;
+  --font32: 32px;
+  --font40: 40px;
+  --font72: 72px;
+  --font96: 96px;
+  --font128: 128px;
+
+  --smarto-h: 60px;
+
+  --btn-h: 60px;
+  --btn-w: 260px;
+  --btn-big: 98px;
+  --btn-circle: 200px;
+
+  --ap-offset: 10%;
+}

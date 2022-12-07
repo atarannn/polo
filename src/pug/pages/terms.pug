@@ -1,0 +1,58 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'terms'
+    var id_page = 'id-page-terms'
+    var class_page = 'class-page-terms'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Условия оплаты',
+        link: pagesLink[0].terms
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .terms-wrapper
+      .terms-card
+        .terms-card-text
+          h4.title-dark Полная оплата
+          p.text-dark Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+        img(src="./assets/images/terms/1.png").img
+      .terms-card.reverse
+        .terms-card-text
+          h4.title-dark Рассрочка
+          p.text-dark Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+        img(src="./assets/images/terms/2.png").img
+      .terms-card
+        .terms-card-text
+          h4.title-dark Кредит
+          p.text-dark Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+        img(src="./assets/images/terms/3.png").img
+
+    .btn-up
+      <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.5 10.8214L18.9706 1.5M18.9706 1.5L9.44118 10.8214M18.9706 1.5C18.9706 7.02381 18.9706 19.2452 18.9706 23.9405C18.9706 29.8095 12.9706 30.5 11.5588 30.5C10.4294 30.5 5.38235 30.5 1.5 30.5" stroke-linecap="round"/>
+      </svg>
+
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

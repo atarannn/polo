@@ -1,0 +1,61 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'documents'
+    var id_page = 'id-page-documents'
+    var class_page = 'class-page-documents'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Документы',
+        link: pagesLink[0].documents
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .documents-wrapper
+      a(href="#" target="_blank").document
+        .document-name Декларация про начало строительных работ от 20.12.2018
+        .document-download
+          span 19.05.2022
+          .document-download-btn.btn.orange-btn
+            +svg('arrow-download')
+      a(href="#" target="_blank").document
+        .document-name Проект договора частичного участия в строительстве паркоместа
+        .document-download
+          span 07.04.2022
+          .document-download-btn.btn.orange-btn
+            +svg('arrow-download')
+      a(href="#" target="_blank").document
+        .document-name Договор субаренды земельного участка, выписка из гос.регистр прав
+        .document-download
+          span 06.04.2022
+          .document-download-btn.btn.orange-btn
+            +svg('arrow-download')
+      a(href="#" target="_blank").document
+        .document-name Изменения в Распоряжение
+        .document-download
+          span 06.04.2022
+          .document-download-btn.btn.orange-btn
+            +svg('arrow-download')
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

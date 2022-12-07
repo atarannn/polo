@@ -1,0 +1,43 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'web-camera'
+    var id_page = 'id-page-web-camera'
+    var class_page = 'class-page-web-camera'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Веб-камера',
+        link: pagesLink[0].web-camera
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .web-camera-wrapper
+      .video-wrapper
+        h6.video-title Название камеры первое
+        iframe.video(src="./assets/images/home/section-1/main-video.mp4" preload="none" autoplay="false" muted="" loop="" playsinline="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+      .video-wrapper
+        h6.video-title Название камеры второе
+        iframe.video(src="./assets/images/home/section-1/main-video.mp4" preload="none" autoplay="false" muted="" loop="" playsinline="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

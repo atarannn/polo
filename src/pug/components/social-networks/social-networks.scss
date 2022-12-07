@@ -1,0 +1,31 @@
+.social-networks {
+  background: $dark;
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: var(--offset32);
+  height: auto;
+  width: fit-content;
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    li {
+      @include font-medium;
+      font-size: var(--font14);
+      line-height: 120%;
+      text-transform: uppercase;
+      a {
+        color: $light;
+        transition: color .3s ease-in-out;
+        @include from(1023px) {
+          &:hover {
+            color: $orange-light;
+            transition: color .3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

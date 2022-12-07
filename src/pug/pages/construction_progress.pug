@@ -1,0 +1,150 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'construction_progress'
+    var id_page = 'id-page-construction_progress'
+    var class_page = 'class-page-construction_progress'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Ход строительства',
+        link: pagesLink[0].construction_progress
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/construction_progress.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .construction_progress-wrapper
+      .construction_progress-top
+        .construction_progress-top-left
+          .title-wrapper
+            .title Статус работ:
+            a(href="web-camera.html").btn.btn-text.orange-btn
+              <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.3319 20.2705C18.9341 19.2661 17.396 18.4857 15.7599 17.9514C15.0287 17.7126 14.2828 17.5247 13.5263 17.3883C14.6583 16.9697 15.6966 16.3145 16.5773 15.4474C18.2005 13.8488 19.0945 11.7237 19.0945 9.46308C19.0945 7.20251 18.2005 5.07742 16.5773 3.4788C14.9539 1.8804 12.7958 1 10.5001 1C8.20436 1 6.04633 1.88024 4.42288 3.4788C2.79967 5.07719 1.90576 7.20231 1.90576 9.46269C1.90576 11.7231 2.79979 13.8483 4.42304 15.447C5.30368 16.3141 6.34185 16.9692 7.47381 17.3879C6.71734 17.5243 5.97152 17.7122 5.24038 17.951C3.60452 18.4853 2.06623 19.2657 0.668343 20.2701C0.524977 20.3731 0.465193 20.5552 0.520249 20.7214C0.575309 20.8875 0.73255 21 0.910079 21H20.09C20.2674 21 20.4248 20.8875 20.4798 20.7214C20.5347 20.5553 20.475 20.3731 20.3316 20.2703L20.3319 20.2705ZM2.72588 9.46304C2.72588 5.24155 6.21344 1.80746 10.5003 1.80746C14.7872 1.80746 18.2747 5.24171 18.2747 9.46304C18.2747 13.6844 14.7872 17.1186 10.5003 17.1186C6.21344 17.1186 2.72588 13.6844 2.72588 9.46304ZM2.26118 20.1928C4.73847 18.706 7.561 17.926 10.5002 17.926C13.4396 17.926 16.2619 18.7059 18.7393 20.1928H2.26118Z" stroke-width="0.2"/>
+              <path d="M10.5013 4.88437C7.93737 4.88437 5.85156 6.93844 5.85156 9.46303C5.85156 11.9878 7.93752 14.0417 10.5013 14.0417C13.0652 14.0417 15.151 11.9876 15.151 9.46303C15.1509 6.93813 13.0651 4.88437 10.5013 4.88437ZM9.44024 6.44374C10.546 6.44374 11.4455 7.32952 11.4455 8.41834C11.4455 9.50716 10.546 10.3929 9.44024 10.3929C8.33452 10.3929 7.43499 9.50716 7.43499 8.41834C7.43499 7.32952 8.33468 6.44374 9.44024 6.44374ZM10.5013 13.2343C8.38942 13.2343 6.67148 11.5424 6.67148 9.46283C6.67148 9.32872 6.67881 9.19626 6.69268 9.06575C6.98994 10.2884 8.10892 11.2002 9.4404 11.2002C10.9982 11.2002 12.2656 9.95215 12.2656 8.41819C12.2656 7.10707 11.3398 6.00518 10.0982 5.71248C10.2307 5.69881 10.3652 5.6916 10.5013 5.6916C12.6131 5.6916 14.3312 7.38343 14.3312 9.46303C14.3311 11.5425 12.613 13.2343 10.5013 13.2343L10.5013 13.2343Z" stroke-width="0.2"/>
+              </svg>
+              span Веб камера
+          .text Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+        ul.construction_progress-top-right.progress-list
+          li
+            .persent-wrapper
+              <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+                <circle class="class-74" cx="65" cy="65" r="65"/>
+              </svg>
+              span 74%
+            span.text Строительство
+          li
+            .persent-wrapper
+              <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+              <circle class="class-62" cx="65" cy="65" r="65"/>
+              </svg>
+              span 62%
+            span.text Благоустройство
+          li
+            .persent-wrapper
+              <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+              <circle class="class-25" cx="65" cy="65" r="65"/>
+              </svg>
+              span 25%
+            span.text Фасад
+          li
+            .persent-wrapper
+              <svg viewBox="0 0 130 130" version="1.1"xmlns="http://www.w3.org/2000/svg" >
+              <circle class="class-17" cx="65" cy="65" r="65"/>
+              </svg>
+              span 17%
+            span.text Сети
+      ul.construction_progress-list
+        li.construction_progress-card(data-open-construction-progress)
+          .left
+            .date
+              .day(data-day) 25
+              .col
+                .month(data-month) Август
+                .year(data-year) 2022
+            .text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .bottom
+              .photo-num
+                p(data-photo) 14
+                | фото
+              .video-num
+                p(data-video) 1
+                | видео
+          .right
+            img(data-img src="./assets/images/construction-progress/1.jpg").img
+    .btn-up
+      <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M28.5 10.8214L18.9706 1.5M18.9706 1.5L9.44118 10.8214M18.9706 1.5C18.9706 7.02381 18.9706 19.2452 18.9706 23.9405C18.9706 29.8095 12.9706 30.5 11.5588 30.5C10.4294 30.5 5.38235 30.5 1.5 30.5" stroke-linecap="round"/>
+      </svg>
+  .construction_progress-popup-wrapper(data-construction-progress)
+    .construction_progress-popup
+      .swiper
+        .swiper-wrapper
+          .swiper-slide
+            .left
+              .date
+                .day(data-day) 25
+                .col
+                  .month(data-month) Август
+                  .year(data-year) 2022
+              .text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .right
+              img(src="./assets/images/construction-progress/1-1.jpg", alt="")
+          .swiper-slide
+            .left
+              .date
+                .day(data-day) 25
+                .col
+                  .month(data-month) Август
+                  .year(data-year) 2022
+              .text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .right
+              img(src="./assets/images/construction-progress/1-1.jpg", alt="")
+          .swiper-slide
+            .left
+              .date
+                .day(data-day) 25
+                .col
+                  .month(data-month) Август
+                  .year(data-year) 2022
+              .text(data-test) Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.
+            .right
+              img(src="./assets/images/construction-progress/1-1.jpg", alt="")
+        .swiper-pagination.swiper-pagination
+        .swiper-button
+          .swiper-left(data-swiper-prev).btn.orange-btn
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 11.5554L2 11.5554M2 11.5554L12 1.00027M2 11.5554L12 21" stroke-width="2"/>
+            </svg>
+          .swiper-right(data-swiper-next).btn.orange-btn
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-4.12836e-07 10.4446L20 10.4446M20 10.4446L10 20.9997M20 10.4446L10 1" stroke-width="2"/>
+            </svg>
+        .btn-close(type="button" data-close-construction-progress)
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 13L1 1M1 13L13 1L1 13Z" stroke-width="2"/>
+          </svg>
+
+
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

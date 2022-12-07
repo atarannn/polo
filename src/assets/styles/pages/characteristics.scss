@@ -1,0 +1,103 @@
+.characteristics-wrapper, .infrastructure-wrapper {
+  padding: var(--top-offset100) var(--offset20) 0;
+  margin-bottom: var(--top-offset100);
+  position: relative;
+  .btn-up {
+    position: absolute;
+    bottom: 0;
+    right: var(--offset20);
+  }
+  .title {
+    font-size: var(--font72);
+    text-transform: none;
+  }
+  .page-text {
+    padding: var(--offset210) var(--offset140);
+    position: relative;
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      height: 592px;
+    }
+  }
+  .top-bottom-offset {
+    padding: var(--offset20) 0;
+  }
+  .top-offset {
+    padding-top: var(--offset20);
+  }
+}
+.characteristics, .infrastructure {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--offset20);
+  .pony {
+    position: absolute;
+    left: 50%;
+    top: -35%;
+    height: 80%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  svg {
+    height: 217px;
+    width: 217px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(-1*(217px/2));
+  }
+  &-left, &-right {
+    width: 50%;
+  }
+  &-title {
+    left: 119px;
+    bottom: 100px;
+    z-index: 1;
+  }
+}
+
+.characteristics-big, .infrastructure-big {
+  width: 100%;
+  .card-style {
+    width: 100%;
+  }
+  &-title-2 {
+    @include font-light;
+    color: $light;
+    font-size: var(--font72);
+    line-height: 120%;
+    left: var(--offset50);
+    top: 50%;
+    transform: translateY(-50%);
+    &.title {
+      max-width: 30%;
+    }
+  }
+  &-title-wrapper {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 20%;
+    .title {
+      position: static;
+      max-width: 100%;
+      &.text-align-right {
+        text-align: right;
+      }
+    }
+    .text {
+      @include font-regular;
+      color: $light;
+      font-size: var(--font24);
+      line-height: 120%;
+      margin-top: var(--offset20);
+    }
+  }
+}

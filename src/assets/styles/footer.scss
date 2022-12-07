@@ -1,0 +1,187 @@
+.footer {
+  height: calc(100vh - var(--heafer-h) - var(--top-offset20));
+  padding: 0 var(--offset20);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-2 {
+  padding: 0 var(--offset20);
+  .footer-copyright {
+    margin-top: 0;
+  }
+}
+.footer-copyright {
+  margin-top: var(--offset20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--smarto-h);
+  &-text {
+    @include font-regular;
+    line-height: 120%;
+    font-size: var(--font14);
+    color: $grey;
+  }
+  .smarto-logo {
+    img {
+      height: var(--smarto-h);
+      width: auto;
+    }
+  }
+}
+
+.contacts-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--offset50);
+  border-radius: 60px;
+  overflow: hidden;
+  background-image: url("../images/footer-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    .contacts-location, .contacts-call-form {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(192, 209, 225, 0.4);
+      border-radius: 100px;
+      height: 70px;
+      @include font-medium;
+      font-size: var(--font24);
+      line-height: 120%;
+      color: $light;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border .3s ease-in-out, background .3s ease-in-out;
+      svg {
+        stroke: $light;
+      }
+      @include from(1023px) {
+        &:hover {
+          border: 1px solid $orange-light;
+          background: $orange-light;
+          transition: border .3s ease-in-out, background .3s ease-in-out;
+        }
+      }
+    }
+    .contacts-location {
+      gap: 24px;
+    }
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    .contacts-title {
+      @include font-light;
+      font-size: var(--font96);
+      color: $light;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+    .contacts-mail {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $light;
+      text-transform: uppercase;
+      gap: 24px;
+      svg {
+        stroke: $light;
+        height: 24px;
+        width: 24px;
+        transition: stroke .3s ease-in-out;
+      }
+      transition: color .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          color: $orange-light;
+          transition: color .3s ease-in-out;
+          svg {
+            stroke: $orange-light;
+            transition: stroke .3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  &-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    .contacts-tell-wrapper {
+      position: absolute;
+      left: 50%;
+      bottom: var(--offset20);
+      transform: translateX(-50%);
+      @include font-regular;
+      font-size: var(--font40);
+      color: $light;
+      line-height: 120%;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .contact-tell {
+        color: $wc;
+        transition: color .3s ease-in-out;
+        @include from(1023px) {
+          &:hover {
+            color: $orange-light;
+            transition: color .3s ease-in-out;
+          }
+        }
+      }
+      .backslash {
+        margin: 0 var(--offset50);
+      }
+    }
+  }
+}
+
+.btn-up {
+  height: var(--btn-big);
+  width: var(--btn-big);
+  background: $light;
+  border: 2px solid $light;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background .3s ease-in-out;
+  svg {
+    stroke: $dark;
+    stroke-width: 2px;
+    transition: stroke .3s ease-in-out;
+  }
+  @include from(1023px) {
+    &:hover {
+      background: transparent;
+      transition: background .3s ease-in-out;
+      svg {
+        stroke: $light;
+        transition: stroke .3s ease-in-out;
+      }
+    }
+  }
+}

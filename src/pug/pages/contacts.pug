@@ -1,0 +1,64 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'contacts'
+    var id_page = 'id-page-contacts'
+    var class_page = 'class-page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Контакты',
+        link: pagesLink[0].contacts
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/form.js')
+block content
+  .contacts-wrapper
+    .contacts-main
+      .contacts-main-top
+        a(href="#" target="_blank").contacts-location
+          <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5058 28.8066C13.4963 28.813 13.4869 28.8192 13.4776 28.8253C13.4728 28.8224 13.468 28.8195 13.4632 28.8165C13.1207 28.6071 12.6277 28.2946 12.0343 27.8877C10.8457 27.0725 9.26431 25.8849 7.68696 24.3938C4.49432 21.3757 1.5 17.2874 1.5 12.6506C1.5 6.24147 6.84653 1 13.5 1C20.1536 1 25.5 6.24201 25.5 12.6512C25.5 16.9179 22.5187 21.0032 19.3026 24.1328C17.7199 25.6729 16.1332 26.9306 14.9405 27.8038C14.3451 28.2398 13.8501 28.5783 13.5058 28.8066ZM7.6713 12.6499C7.6713 15.823 10.3071 18.3488 13.5 18.3488C16.6928 18.3488 19.3287 15.823 19.3287 12.6499C19.3287 9.47711 16.6927 6.95138 13.5 6.95138C10.3073 6.95138 7.6713 9.47711 7.6713 12.6499Z"/>
+          </svg>
+          span Какабадзе 2 6, 2 этаж. г. Батуми. Аджара. Грузия
+        .contacts-call-form(data-call-form)
+          span Обратная связь
+      .contacts-main-center
+        .contacts-title Контакты
+        a(href="mailto:polovillasbatumi@gmail.com").contacts-mail
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19.2 5H4.8C3.80589 5 3 5.7835 3 6.75V17.25C3 18.2165 3.80589 19 4.8 19H19.2C20.1941 19 21 18.2165 21 17.25V6.75C21 5.7835 20.1941 5 19.2 5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 8L12.927 12.7532C12.6491 12.9145 12.3279 13 12 13C11.6721 13 11.3509 12.9145 11.073 12.7532L3 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          span polovillasbatumi@gmail.com
+      .contacts-main-bottom
+        include ../components/social-networks/social-networks.pug
+        .contacts-tell-wrapper
+          a(href="tel:+995596076076").contact-tell
+            span +995 596 076 076
+          .backslash /
+          a(href="tel:+995557420004").contact-tell
+            span +995 557 420 004
+          .backslash /
+          a(href="tel:+995557300482").contact-tell
+            span +995 557 300 482
+    .footer-copyright
+      p.footer-copyright-text © 2022 ЖК “Polo Villas Signature”. Все права защищены
+      a(href="#").smarto-logo
+        img(src="./assets/images/smarto-logo.svg")
+
+block header
+  include ../includes/header.pug

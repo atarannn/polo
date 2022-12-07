@@ -1,0 +1,27 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 1;
+  svg {
+    stroke: $grey;
+    transition: stroke .3s ease-in-out;
+  }
+  span {
+    @include font-regular;
+    color: $grey;
+    font-size: var(--font24);
+    padding: 0 24px;
+    transition: color .3s ease-in-out;
+  }
+  .breadcrumbs-item {
+    @include font-regular;
+    font-size: var(--font24);
+    text-transform: uppercase;
+    line-height: 100%;
+    a {
+      color: $wc;
+      transition: color .3s ease-in-out;
+    }
+  }
+}

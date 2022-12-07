@@ -1,0 +1,34 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'panorama'
+    var id_page = 'id-page-panorama'
+    var class_page = 'class-page-panorama'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Панорама',
+        link: pagesLink[0].panorama
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+block content
+  .panorama-wrapper
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .panorama
+block footer
+  include ../includes/footer-2.pug
+block header
+  include ../includes/header.pug

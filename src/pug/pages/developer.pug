@@ -1,0 +1,139 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'developer'
+    var id_page = 'id-page-developer'
+    var class_page = 'class-page-developer'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Застройщик',
+        link: pagesLink[0].developer
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/arrow-down.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .developer-wrapper
+      .developer-top
+        .developer-top-title
+          p Polo Construction —
+          p застройщик проекта
+          <svg width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="108.5" cy="108.5" r="85" stroke-width="47" stroke-dasharray="1 38"/>
+            <circle cx="108.5" cy="108.5" r="50.0796" transform="rotate(10.6372 108.5 108.5)" stroke-width="26" stroke-dasharray="1 24"/>
+            <circle cx="108.5" cy="108.5" r="29.6521" stroke-width="16" stroke-dasharray="1 13"/>
+          </svg>
+        .developer-top-text
+          p Работаем с 2017 года. Специализируемся на малоэтажном строительстве (хотя был проект 21 этажного дома в котором мы участвовали), самый крупный и "старый" застройщик малоэтажного строительства. Первые в Грузии предложили форматы домов типа - таунхаус.
+          p Внедряем новые технологии. Первые начали использовать вентилируемые фасады на малоэтажной застройке. Строим в одной локации (называем квартал Polo Villas), уже построено или находится в фазе строительства 6 комплексов.
+        a(href="#developer-list-wrapper").btn-down
+          <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 21.1786L11.0294 30.5M11.0294 30.5L20.5588 21.1786M11.0294 30.5C11.0294 24.9762 11.0294 12.7548 11.0294 8.05952C11.0294 2.19048 17.0294 1.5 18.4412 1.5C19.5706 1.5 24.6176 1.5 28.5 1.5" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+      #developer-list-wrapper.developer-list-wrapper
+        h5.developer-list-title Наши партнеры и поставщики
+        ul.developer-list
+          li.developer-list-item
+            img(src="./assets/images/developer/1.svg").img
+            .text
+              span 01
+              p Bobcat
+          li.developer-list-item
+            img(src="./assets/images/developer/2.svg").img
+            .text
+              span 02
+              p Manitou Group
+          li.developer-list-item
+            img(src="./assets/images/developer/3.svg").img
+            .text
+              span 03
+              p JCB
+          li.developer-list-item
+            img(src="./assets/images/developer/4.svg").img
+            .text
+              span 04
+              p Knauf
+          li.developer-list-item
+            img(src="./assets/images/developer/5.svg").img
+            .text
+              span 05
+              p Fundermax
+        .developer-list-subtitle.section-top-offset
+          p Все проекты компании отличаются современным дизайном, максимальной функциональностью и использованием самых последних современных строительных материалов. Все клиенты компании получают гарантию на объект, а последующее содержание объектов и территории осуществляется собственной технической службой.
+      .developer-other-projects.section-top-offset
+        .developer-other-projects-title
+          p Другие проекты застройщика
+          <svg width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="108.5" cy="108.5" r="85" stroke-width="47" stroke-dasharray="1 38"/>
+            <circle cx="108.5" cy="108.5" r="50.0796" transform="rotate(10.6372 108.5 108.5)" stroke-width="26" stroke-dasharray="1 24"/>
+            <circle cx="108.5" cy="108.5" r="29.6521" stroke-width="16" stroke-dasharray="1 13"/>
+          </svg>
+        ul.developer-other-projects-list
+          li.developer-other-projects-list-item
+            .img-wrapper
+              img(src="./assets/images/developer/1.png").img
+              img(src="./assets/images/developer/pony.svg").svg
+            .text-wrapper
+              h5 Polo Villas Parklane
+              p Polo Villas Parklane — это второй из четырех проектов жилой малоэтажной застройки Polo Villas в пределах Батуми. Уникальный для Батуми жилой комплекс клубного типа расположен в тихом месте, вне городского шума и суеты, в окружении мандариновых садов. При этом Вы за 2 минуты сможете добраться до берега моря, за 3 минуты до парка Нового бульвара, за 10 минут до центра города Батуми. А через 30 минут от Вашего дома Вы сможете путешествовать по горам, лесам, купаться или ловить рыбу в горных реках, бродить по древнейшим крепостям и тысячелетним мостам.
+              a(href="#").btn.btn-text.orange-btn
+                span Узнать больше
+          li.developer-other-projects-list-item.reverse
+            .img-wrapper
+              img(src="./assets/images/developer/2.png").img
+              img(src="./assets/images/developer/pony.svg").svg
+            .text-wrapper
+              h5 Polo Villas One, Batumi
+              p Уникальный и первый для Батуми проект от международной компании — жилой престижный комплекс таунхаусов Polo Villas One. Комплекс Polo Villas One (Поло Виллас Ван) располагается в «укромном» тихом месте в природном окружении из мандариновых деревьев в 2-х минутах езды от Нового Бульвара и в 10 минутах от исторического центра Батуми. Всего 24 двухуровневых таунхаусов современного дизайна в стиле хай-тек.
+              a(href="#").btn.btn-text.orange-btn
+                span Узнать больше
+          li.developer-other-projects-list-item
+            .img-wrapper
+              img(src="./assets/images/developer/3.png").img
+              img(src="./assets/images/developer/pony.svg").svg
+            .text-wrapper
+              h5 Polo Villas Garden
+              p Представляем новый, третий проект от компании Polo Construction — комплекс элитных жилых домов в Грузии Polo Villas Garden (Поло Виллас Гарден). Комплекс расположен в Батуми в так называемом квартале Polo Villas. Удобное расположение, продуманная инфраструктура всего квартала, просторная застройка и бескрайняя зелень горного массива создают поистине европейские условия проживания посреди живой природы! Комплекс Polo Vllas Garden это отличная современная альтернатива частному дому в деревне в Грузии или дому в горах.
+              a(href="#").btn.btn-text.orange-btn
+                span Узнать больше
+          li.developer-other-projects-list-item.reverse
+            .img-wrapper
+              img(src="./assets/images/developer/4.png").img
+              img(src="./assets/images/developer/pony.svg").svg
+            .text-wrapper
+              h5 Polo Villas One, Greenfield
+              p Представляем новый, 4-й проект от ведущего в Батуми международного застройщика малоэтажного строительства компании Polo Construction — премиальный жилой комплекс Polo Villas Greenfield. Жилой комплекс Polo Villas Greenfield представляет собой хорошо знакомый жителям европейских стран, однако совершенно новый для Грузии формат домов: дома-таунхаусы со своим земельным участком. Комплекс домов-таунхаусов находиться в так называемой локации «квартал Polo Villas», где сосредоточены все проекты Polo Villas.
+              a(href="#").btn.btn-text.orange-btn
+                span Узнать больше
+
+  .developer-map.section-top-offset
+    .developer-map-title
+      h5 Общий генплан Polo Villas
+    .map
+      img(src="./assets/images/developer/map.jpg")
+      .btn-up
+        <svg width="30" height="32" viewBox="0 0 30 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.5 10.8214L18.9706 1.5M18.9706 1.5L9.44118 10.8214M18.9706 1.5C18.9706 7.02381 18.9706 19.2452 18.9706 23.9405C18.9706 29.8095 12.9706 30.5 11.5588 30.5C10.4294 30.5 5.38235 30.5 1.5 30.5" stroke-linecap="round"/>
+        </svg>
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

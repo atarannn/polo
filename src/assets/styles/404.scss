@@ -1,0 +1,47 @@
+#id-page-404 {
+  .page-404-wrapper {
+    position: relative;
+    height: calc(100vh - var(--smarto-h));
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .bg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+      height: 75%;
+    }
+  }
+  .page-404-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    p {
+      @include font-regular;
+      font-size: var(--font24);
+      color: $grey;
+      line-height: 120%;
+      width: 100%;
+      text-align: center;
+      margin: var(--offset60) 0;
+    }
+    .page-404-btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--offset20);
+      width: 100%;
+      .btn {
+        height: var(--btn-h);
+        width: 50%;
+        span {
+          font-size: var(--font20);
+        }
+      }
+    }
+  }
+}

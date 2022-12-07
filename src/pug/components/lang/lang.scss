@@ -1,0 +1,27 @@
+.lang {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  li {
+    @include font-medium;
+    line-height: 120%;
+    text-transform: uppercase;
+    a {
+      color: $grey;
+      transition: color .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          color: $orange-light;
+          transition: color .3s ease-in-out;
+        }
+      }
+    }
+    &.active {
+      a {
+        color: $light;
+        pointer-events: none;
+      }
+    }
+  }
+}

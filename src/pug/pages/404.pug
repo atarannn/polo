@@ -1,0 +1,38 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = '404'
+    var id_page = 'id-page-404'
+    var class_page = 'class-page-404'
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+block content
+  .page-404-wrapper
+    img(src="./assets/images/404/pony.svg").bg
+    .page-404-info
+      img(src="./assets/images/404/404.png")
+      p Упс, что-то пошло не так...
+      .page-404-btn-wrapper
+        a(href="#").btn.btn-text.orange-btn
+          span Выбрать квартиру
+        a(href="index.html").btn.btn-text.orange-btn
+          span На главную
+
+
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

@@ -1,0 +1,109 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'infrastructure'
+    var id_page = 'id-page-infrastructure'
+    var class_page = 'class-page-infrastructure'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Инфраструктура',
+        link: pagesLink[0].infrastructure
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/header.js')
+  script(defer src='./assets/scripts/map.bundle.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/menu.js')
+  script(defer src='./assets/scripts/footer.js')
+block content
+  .page-offset
+    include ../components/breadcrumbs/breadcrumbs.pug
+    .infrastucture-title
+      h3 Внутренняя
+      <svg class="rotate" width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="108.5" cy="108.5" r="85" stroke="#6C7A88" stroke-width="47" stroke-dasharray="1 38"/>
+      <circle cx="108.5" cy="108.5" r="50.0796" transform="rotate(10.6372 108.5 108.5)" stroke="#6C7A88" stroke-width="26" stroke-dasharray="1 24"/>
+      <circle cx="108.5" cy="108.5" r="29.6521" stroke="#6C7A88" stroke-width="16" stroke-dasharray="1 13"/>
+      </svg>
+
+  .infrastructure-wrapper
+    .infrastructure.reletive
+      img(src="./assets/images/infrastructure/pony.svg").pony
+      .infrastructure-left.card-style
+        img(src="./assets/images/infrastructure/1.png")
+        h6.infrastructure-title.title Детская площадка
+      .infrastructure-right.card-style
+        img(src="./assets/images/infrastructure/2.png")
+        h6.infrastructure-title.title Спортивная площадка (воркаут)
+    .infrastructure-big.top-bottom-offset
+      .card-style
+        img(src="./assets/images/infrastructure/3.png")
+        h6.infrastructure-big-title-2.title Большой бассейн
+    .infrastructure
+      .infrastructure-left.card-style
+        img(src="./assets/images/infrastructure/4.png")
+        h6.infrastructure-title.title Видеонаблюдение 24/7
+      .infrastructure-right.card-style
+        img(src="./assets/images/infrastructure/5.png")
+        h6.infrastructure-title.title Магазин на территории
+    .infrastructure-big.top-bottom-offset
+      .card-style
+        img(src="./assets/images/infrastructure/6.png")
+        .infrastructure-big-title-wrapper
+          h6.title Магазин на территории
+    .infrastructure
+      .infrastructure-left.card-style
+        img(src="./assets/images/infrastructure/7.png")
+        h6.infrastructure-title.title Гостевой паркинг
+      .infrastructure-right.card-style
+        img(src="./assets/images/infrastructure/8.png")
+        h6.infrastructure-title.title Прокат автомобилей
+    .infrastructure-big.top-bottom-offset
+      .card-style
+        img(src="./assets/images/infrastructure/9.png")
+        h6.infrastructure-big-title-2.title Поле для минифутбола
+    .infrastructure
+      .infrastructure-left.card-style
+        img(src="./assets/images/infrastructure/10.png")
+        h6.infrastructure-title.title Винодельня с дегустационным залом
+      .infrastructure-right.card-style
+        img(src="./assets/images/infrastructure/11.png")
+        h6.infrastructure-title.title Зона выгула собак
+    .infrastructure-big.top-offset
+      .card-style
+        img(src="./assets/images/infrastructure/12.png")
+        .infrastructure-big-title-wrapper
+          h6.title.text-align-right Сауна и тренажеры
+
+  .page-offset
+    .infrastucture-title-2
+      h3 Внешняя
+
+  .map-main
+    .map-wrapper
+      #map.map
+    .map-navigation
+      .map-navigation__header Инфраструктура
+      .map-navigation__wrap
+        .map-navigation__main
+        .map-navigation__markers-wrap
+          .map-navigation__markers
+
+
+block footer
+  include ../includes/footer-2.pug
+
+block header
+  include ../includes/header.pug

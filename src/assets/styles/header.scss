@@ -1,0 +1,134 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: calc(100% - var(--offset20)*2);
+  height: var(--heafer-h);
+  margin: calc(var(--top-offset20)/2) var(--offset20);
+  padding: 0 var(--offset32);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $dark;
+  backdrop-filter: blur(25px);
+  border-radius: 100px;
+  &-logo {
+    img {
+      height: var(--logo-h);
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  &-info-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    .header-location {
+      @include font-medium;
+      font-size: var(--header-font14);
+      color: $light;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      transition: color .3s ease-in-out;
+      svg {
+        stroke: $light;
+        height: 16px;
+        width: auto;
+      }
+      @include from(1023px) {
+        &:hover {
+          color: $orange-light;
+          transition: color .3s ease-in-out;
+          svg {
+            stroke: $orange-light;
+            transition: stroke .3s ease-in-out;
+          }
+        }
+      }
+    }
+    .web-camera-btn {
+      height: var(--header-btn-h);
+      width: var(--header-btn-w);
+      border: 1px solid rgba(108, 122, 136, 0.5);
+      background: transparent;
+      transition: border .3s ease-in-out, background .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          border: 1px solid $orange-light;
+          background: $orange-light;
+          transition: border .3s ease-in-out, background .3s ease-in-out;
+        }
+      }
+    }
+    .appartment-btn {
+      height: var(--header-btn-h);
+      width: var(--header-btn-w);
+    }
+    .tell-btn {
+      @include font-medium;
+      line-height: 120%;
+      color: $light;
+      transition: color .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          color: $orange-light;
+          transition: color .3s ease-in-out;
+        }
+      }
+    }
+    .menu-btn {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+      @include font-medium;
+      color: $light;
+      line-height: 120%;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: color .3s ease-in-out;
+      @include from(1023px) {
+        &:hover {
+          color: $orange-light;
+          transition: color .3s ease-in-out;
+          .menu-btn-icon {
+            span {
+              background: $orange-light;
+              transition: background .3s ease-in-out;
+              &:first-child {
+                width: 100%;
+                transition: width .2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+      &-icon {
+        width: 28px;
+        span {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          height: 2px;
+          background: $light;
+          width: 100%;
+          transition: background .3s ease-in-out;
+          &:first-child {
+            width: 50%;
+            margin-bottom: 6px;
+            transition: width .2s ease-in-out;
+          }
+          &:last-child {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+}
