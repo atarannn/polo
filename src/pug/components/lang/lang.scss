@@ -5,6 +5,7 @@
   justify-content: center;
   li {
     @include font-medium;
+    font-size: var(--header-font14);
     line-height: 120%;
     text-transform: uppercase;
     a {

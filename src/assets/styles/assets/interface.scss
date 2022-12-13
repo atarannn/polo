@@ -67,7 +67,7 @@
 }
 
 .card-style {
-  border-radius: 60px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
   img {
@@ -109,6 +109,9 @@
       transform: translateX(100%);
       transition: .5s;
       pointer-events: none;
+      @include to(1440px) {
+        max-width: 60%;
+      }
       &.visible {
         opacity: 1;
         transform: translateX(0%);
@@ -168,6 +171,9 @@
   transition: background .3s ease-in-out, border .3s ease-in-out;
   svg {
     stroke: $light;
+    @include to(1440px) {
+      height: 40%;
+    }
   }
   @include from(1023px) {
     &:hover {

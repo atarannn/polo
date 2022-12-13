@@ -10,7 +10,7 @@
 }
 .terms-wrapper {
   padding: var(--top-offset40) 0 0;
-  margin-bottom: 100px;
+  margin-bottom: var(--top-offset100);
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -28,13 +28,27 @@
     padding: var(--offset32);
     gap: var(--offset20);
     height: 600px;
+    @include to(1440px) {
+      height: 450px;
+    }
+    @include to(1180px) {
+      flex-direction: column;
+      height: 500px;
+    }
     &.reverse {
       flex-direction: row-reverse;
+      @include to(1180px) {
+        flex-direction: column;
+      }
     }
     .img {
       height: 100%;
       object-fit: cover;
       border-radius: var(--border-radius-3);
+      @include to(1180px) {
+        height: 350px;
+        object-position: top;
+      }
     }
     .title-dark {
       @include font-light;

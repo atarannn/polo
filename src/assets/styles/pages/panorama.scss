@@ -4,6 +4,9 @@
   height: calc(100vh - var(--heafer-h) - var(--offset20) - calc(var(--offset20)/2) - var(--smarto-h));
   .breadcrumbs {
     padding: var(--offset50) 119px;
+    @include to(1180px) {
+      padding: var(--offset50) 50px;
+    }
   }
   .panorama {
     background: $orange-light;

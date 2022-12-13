@@ -4,6 +4,9 @@
   gap: var(--offset20) var(--offset20);
   padding: var(--offset60) 0 0;
   margin-bottom: 100px;
+  @include to(1180px) {
+    grid-template-columns: 1fr;
+  }
   .video-wrapper {
     .video-title {
       @include font-medium;
@@ -17,6 +20,9 @@
       width: 100%;
       height: 524px;
       border-radius: var(--border-radius-2);
+      @include to(1440px) {
+        height: 450px;
+      }
       video {
         margin: 0!important;
         height: 100%;

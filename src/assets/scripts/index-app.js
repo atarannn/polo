@@ -14,12 +14,12 @@ gsap.registerPlugin(ScrollTrigger);
 global.axios = axios;
 
 
-
-
-motionHoverEffect(
-  document.querySelector('.menu'),
-  document.querySelector('.menu-list')
-)
+if(document.documentElement.clientWidth > 1180) {
+  motionHoverEffect(
+    document.querySelector('.menu'),
+    document.querySelector('.menu-list')
+  )
+}
 
 var myAnimation = new hoverEffect({
   parent: document.querySelector('#about .about-left.card-style.js-hover-card-animation'),

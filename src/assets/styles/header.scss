@@ -52,6 +52,7 @@
       }
     }
     .web-camera-btn {
+      font-size: var(--header-font14);
       height: var(--header-btn-h);
       width: var(--header-btn-w);
       border: 1px solid rgba(108, 122, 136, 0.5);
@@ -68,6 +69,7 @@
     .appartment-btn {
       height: var(--header-btn-h);
       width: var(--header-btn-w);
+      font-size: var(--header-font14);
     }
     .tell-btn {
       @include font-medium;
@@ -87,6 +89,7 @@
       justify-content: flex-start;
       gap: 20px;
       @include font-medium;
+      font-size: var(--header-font14);
       color: $light;
       line-height: 120%;
       text-transform: uppercase;
@@ -110,6 +113,9 @@
       }
       &-icon {
         width: 28px;
+        @include to(1440px) {
+          width: 20px;
+        }
         span {
           display: flex;
           flex-direction: column;
@@ -123,9 +129,15 @@
             width: 50%;
             margin-bottom: 6px;
             transition: width .2s ease-in-out;
+            @include to(1440px) {
+              margin-bottom: 4px;
+            }
           }
           &:last-child {
             margin-top: 6px;
+            @include to(1440px) {
+              margin-top: 4px;
+            }
           }
         }
       }

@@ -6,6 +6,7 @@
   svg {
     stroke: $grey;
     transition: stroke .3s ease-in-out;
+    height: var(--font24);
   }
   span {
     @include font-regular;
@@ -19,6 +20,8 @@
     font-size: var(--font24);
     text-transform: uppercase;
     line-height: 100%;
+    display: flex;
+    align-items: center;
     a {
       color: $wc;
       transition: color .3s ease-in-out;

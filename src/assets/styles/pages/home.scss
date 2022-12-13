@@ -46,7 +46,7 @@
 .images-section {
   &-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: var(--offset20);
     position: relative;
@@ -60,21 +60,28 @@
       align-items: center;
       justify-content: center;
       height: 800px;
+      @include to(1440px) {
+        height: 600px;
+      }
+      @include to(1180px) {
+        height: auto;
+      }
     }
   }
   .left-svg, .right-svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: auto;
   }
   .left-svg {
     left: 0;
     z-index: 1;
+    width: 50%;
   }
   .right-svg {
     right: 0;
     z-index: 3;
+    width: 53%;
   }
   &-left {
     z-index: 1;
@@ -101,6 +108,9 @@
 
 .apartments-section {
   padding: 300px 0;
+  @include to(1440px) {
+    padding: 250px 0;
+  }
   &-wrapper {
     display: flex;
     align-items: center;
@@ -144,16 +154,24 @@
       text-align: center;
     }
     .orange-btn {
-      width: 260px;
+      width: var(--btn-w);
       height: var(--btn-h);
       margin-top: 32px;
       font-size: var(--font20);
     }
   }
   &-left, &-right {
-    height: 400px;
     position: absolute;
     top: -50%;
+    img {
+      height: 400px;
+      @include to(1440px) {
+        height: 400px;
+      }
+    }
+    @include to(1440px) {
+      top: -70%;
+    }
   }
   &-left {
     left: calc(var(--ap-offset)/2);
@@ -173,11 +191,20 @@
   justify-content: space-between;
   width: 100%;
   gap: var(--offset20);
+  @include to(1180px) {
+    flex-direction: column;
+  }
   &-left, &-right {
     width: 50%;
     height: 800px;
     img {
       object-fit: cover;
+    }
+    @include to(1440px) {
+      height: 600px;
+    }
+    @include to(1180px) {
+      width: 100%;
     }
   }
   &-left {

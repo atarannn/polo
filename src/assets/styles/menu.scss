@@ -23,6 +23,12 @@
       left: 50%;
       bottom: 0;
       z-index: -1;
+      @include to(1440px) {
+        font-size: 500px;
+      }
+      @include to(1180px) {
+        font-size: 290px;
+      }
     }
     .menu-close {
       position: absolute;
@@ -34,6 +40,12 @@
       svg {
         fill: $light;
         transition: fill .3s ease-in-out;
+      }
+      @include to(1440px) {
+        top: 50px;
+        right: 50px;
+        height: 26px;
+        width: 26px;
       }
       @include from(1023px) {
         &:hover {
@@ -53,6 +65,9 @@
     padding: 5% 10%;
     height: 100vh;
     overflow-y: scroll;
+    @include to(1180px) {
+      padding: 50px;
+    }
     li {
       margin-bottom: var(--offset50);
       display: flex;
@@ -101,5 +116,5 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 1;
 }

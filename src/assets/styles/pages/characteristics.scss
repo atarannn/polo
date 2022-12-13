@@ -21,6 +21,12 @@
       transform: translate(-50%, -50%);
       z-index: -1;
       height: 592px;
+      @include to(1440px) {
+        height: 450px;
+      }
+      @include to(1180px) {
+        height: 250px;
+      }
     }
   }
   .top-bottom-offset {
@@ -51,6 +57,11 @@
     left: 50%;
     transform: translateX(-50%);
     top: calc(-1*(217px/2));
+    @include to(1440px) {
+      height: 150px;
+      width: 150px;
+      top: calc(-1*(150px/2));
+    }
   }
   &-left, &-right {
     width: 50%;
@@ -59,6 +70,14 @@
     left: 119px;
     bottom: 100px;
     z-index: 1;
+    @include to(1440px) {
+      left: 50px;
+      bottom: 50px;
+    }
+    @include to(1180px) {
+      left: 30px;
+      bottom: 30px;
+    }
   }
 }
 
@@ -85,6 +104,9 @@
     top: 50%;
     transform: translateY(-50%);
     max-width: 20%;
+    @include to(1180px) {
+      max-width: 35%;
+    }
     .title {
       position: static;
       max-width: 100%;

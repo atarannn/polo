@@ -26,6 +26,7 @@
     color: $grey;
   }
   .smarto-logo {
+    cursor: pointer;
     img {
       height: var(--smarto-h);
       width: auto;
@@ -70,6 +71,15 @@
       transition: border .3s ease-in-out, background .3s ease-in-out;
       svg {
         stroke: $light;
+        @include to(1440px) {
+          height: 50%;
+        }
+      }
+      @include to(1440px) {
+        height: 60px;
+      }
+      @include to(1180px) {
+        width: 100%;
       }
       @include from(1023px) {
         &:hover {
@@ -81,6 +91,11 @@
     }
     .contacts-location {
       gap: 24px;
+      span {
+        @include to(1180px) {
+          width: 70%;
+        }
+      }
     }
   }
   &-center {
@@ -103,13 +118,20 @@
       color: $light;
       text-transform: uppercase;
       gap: 24px;
+      transition: color .3s ease-in-out;
       svg {
         stroke: $light;
         height: 24px;
         width: 24px;
         transition: stroke .3s ease-in-out;
+        @include to(1440px) {
+          height: 20px;
+          width: 20px;
+        }
       }
-      transition: color .3s ease-in-out;
+      @include to(1440px) {
+        gap: 20px;
+      }
       @include from(1023px) {
         &:hover {
           color: $orange-light;
@@ -173,6 +195,9 @@
     stroke: $dark;
     stroke-width: 2px;
     transition: stroke .3s ease-in-out;
+    @include to(1440px) {
+      height: 40%;
+    }
   }
   @include from(1023px) {
     &:hover {
