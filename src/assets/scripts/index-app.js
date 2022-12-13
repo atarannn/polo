@@ -6,11 +6,20 @@ import FormMonster from '../../pug/components/form/form';
 import SexyInput from '../../pug/components/input/input';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import hoverEffect from 'hover-effect';
+import motionHoverEffect from './modules/effects/motionHoverEffects';
 
 global.gsap = gsap;
 global.ScrollTrigger = ScrollTrigger;
 gsap.registerPlugin(ScrollTrigger);
 global.axios = axios;
+
+
+
+
+motionHoverEffect(
+  document.querySelector('.menu'),
+  document.querySelector('.menu-list')
+)
 
 var myAnimation = new hoverEffect({
   parent: document.querySelector('#about .about-left.card-style.js-hover-card-animation'),
@@ -116,5 +125,4 @@ form.forEach((form) => {
     }, false);
   }
 });
-
 
