@@ -15,8 +15,8 @@ gsap
   .timeline({
     scrollTrigger: {
       trigger: '.images-section-wrapper',
-      scrub: 3,
-      start: '-80% top',
+      scrub: 1,
+      start: '-30% top',
     },
   })
   .to('.images-section-left', { y: -50,  duration: 5 }, '<')
