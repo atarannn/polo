@@ -7,8 +7,8 @@ block variable
     var class_page = 'class-page-gallery'
     var breadcrumbsSubitem = [
       {
-        label: 'Инфраструктура',
-        link: pagesLink[0].infrastructure
+        label: 'Галерея',
+        link: pagesLink[0].gallery
       }
     ]
 
@@ -19,86 +19,79 @@ block head
     link(rel='stylesheet', href="./assets/styles/main.min.css")
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
   script(defer src='./assets/scripts/FullScreenScroll.bundle.js')
   script(defer src='./assets/scripts/libs.js')
   script(defer src='./assets/scripts/index.js')
-  script(defer src='./assets/scripts/header.js')
-  script(defer src='./assets/scripts/map.bundle.js')
   script(defer src='./assets/scripts/loader.js')
   script(defer src='./assets/scripts/menu.js')
-  script(defer src='./assets/scripts/footer.js')
 block content
-    <nav class="frame__nav"> <button class="frame__nav-button unbutton frame__nav-button--current">Stronger</button> <button class="frame__nav-button unbutton">No choice</button> <button class="frame__nav-button unbutton">Owned no longer</button> <button class="frame__nav-button unbutton">Assert control</button> <button class="frame__nav-button unbutton">Cold &amp; detached</button> </nav>
+    <nav class="frame__nav">
+      <button class="frame__nav-button unbutton frame__nav-button--current">Игровая зона</button>
+      <button class="frame__nav-button unbutton">Уборная</button>
+      <button class="frame__nav-button unbutton">Спальня</button>
+      <button class="frame__nav-button unbutton">Улица</button>
+      <button class="frame__nav-button unbutton">Бассейн</button>
+      <button class="frame__nav-button unbutton">Спорт площадка</button>
+      <button class="frame__nav-button unbutton">Внутренний двор</button>
+      <button class="frame__nav-button unbutton">Зона барбекю</button>
+    </nav>
+    .scroll-wrapper
+      <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 11.1786L6.29412 16M6.29412 16L11.5882 11.1786M6.29412 16C6.29412 13.1429 6.29412 6.82143 6.29412 4.39286C6.29412 1.35714 9.62745 1 10.4118 1C11.0392 1 13.8431 1 16 1" stroke="#E3EBF3" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      p скрольте или потяните
     .frame__back
         <div class="cursor"> <span class="cursor__text words chars splitting" data-splitting="" style="--word-total:3; --char-total:13;"><span class="word" data-word="+" style="--word-index:0;"><span class="char" data-char="+" style="--char-index:0;">+</span></span><span class="whitespace"> </span><span class="word" data-word="Discover" style="--word-index:1;"><span class="char" data-char="D" style="--char-index:1;">D</span><span class="char" data-char="i" style="--char-index:2;">i</span><span class="char" data-char="s" style="--char-index:3;">s</span><span class="char" data-char="c" style="--char-index:4;">c</span><span class="char" data-char="o" style="--char-index:5;">o</span><span class="char" data-char="v" style="--char-index:6;">v</span><span class="char" data-char="e" style="--char-index:7;">e</span><span class="char" data-char="r" style="--char-index:8;">r</span></span><span class="whitespace"> </span><span class="word" data-word="more" style="--word-index:2;"><span class="char" data-char="m" style="--char-index:9;">m</span><span class="char" data-char="o" style="--char-index:10;">o</span><span class="char" data-char="r" style="--char-index:11;">r</span><span class="char" data-char="e" style="--char-index:12;">e</span></span></span> </div>
     .slides
         .slide
             .slide__inner
                 .slide__img
-                    .slide__img-inner(style='background-image:url(./assets/images/about/1.png)')
+                    .slide__img-inner(style='background-image:url(./assets/images/gallery/1.png)')
                 .slide__content
-                    .slide__content-img(style='background-image:url(./assets/images/about/1.png)')
-                    h2 Stronger
-                    p
-                    | You strung me along, I thought I was strong, but now you have pushed me under. I&rsquo;ve opened my eyes, and counted the lies, now it is clearer to me. You are just a user, and an abuser, and I refuse to take it.
+                    .slide__content-img(style='background-image:url(./assets/images/gallery/1.png)')
         .slide
             .slide__inner
                 .slide__content
-                    .slide__content-img(style='background-image:url(./assets/images/about/2.png)')
-                    h2 No choice
-                    p
-                    | Fall into line, you will do as you&rsquo;re told. No choice fatigue, your blood is running cold. We lose control, the world will fall apart.
+                    .slide__content-img(style='background-image:url(./assets/images/gallery/2.png)')
                 .slide__img
-                    .slide__img-inner(style='background-image:url(./assets/images/about/2.png)')
+                    .slide__img-inner(style='background-image:url(./assets/images/gallery/2.png)')
         .slide
             .slide__inner
                 .slide__content
-                    .slide__content-img(style='background-image:url(./assets/images/about/2.png)')
-                    h2 No choice
-                    p
-                    | Fall into line, you will do as you&rsquo;re told. No choice fatigue, your blood is running cold. We lose control, the world will fall apart.
+                    .slide__content-img(style='background-image:url(./assets/images/gallery/3.png)')
                 .slide__img
-                    .slide__img-inner(style='background-image:url(./assets/images/about/2.png)')
+                    .slide__img-inner(style='background-image:url(./assets/images/gallery/3.png)')
         .slide
             .slide__inner
                 .slide__content
-                    .slide__content-img(style='background-image:url(./assets/images/about/3.png)')
-                    h2 No choice
-                    p
-                    | Fall into line, you will do as you&rsquo;re told. No choice fatigue, your blood is running cold. We lose control, the world will fall apart.
+                    .slide__content-img(style='background-image:url(./assets/images/gallery/4.png)')
                 .slide__img
-                    .slide__img-inner(style='background-image:url(./assets/images/about/3.png)')
-        //- .slide
-        //-     .slide__inner
-        //-     .slide__content
-        //-         .slide__content-img(style='background-image:url(3.f6f48295.jpg)')
-        //-         h2 Owned no longer
-        //-         p
-        //-         | We need a transmutation. One we all conceive. We need a revolution. So long as we stay free.
-        //-     .slide__img
-        //-         .slide__img-inner(style='background-image:url(3.f6f48295.jpg)')
-        //- .slide
-        //-     .slide__inner
-        //-     .slide__content
-        //-         .slide__content-img(style='background-image:url(4.516b9c03.jpg)')
-        //-         h2 Assert control
-        //-         p
-        //-         | Cornered, I&rsquo;m exhausted with fear. Our love and compassion dissolved. And demons, have materialised in me. Can&rsquo;t fight them, they&rsquo;re taking control.
-        //-     .slide__img
-        //-         .slide__img-inner(style='background-image:url(4.516b9c03.jpg)')
-        //- .slide
-        //-     .slide__inner
-        //-     .slide__content
-        //-         .slide__content-img(style='background-image:url(5.95d97ae8.jpg)')
-        //-         h2 Cold &amp; detached
-        //-         p
-        //-         | Fate has brought us here to face. Our hopes and dreams erased. Either kill or be killed.
-        //-     .slide__img
-        //-         .slide__img-inner(style='background-image:url(5.95d97ae8.jpg)')
-
-
-block footer
-  include ../includes/footer-2.pug
+                    .slide__img-inner(style='background-image:url(./assets/images/gallery/4.png)')
+        .slide
+          .slide__inner
+            .slide__content
+              .slide__content-img(style='background-image:url(./assets/images/gallery/5.png)')
+            .slide__img
+              .slide__img-inner(style='background-image:url(./assets/images/gallery/5.png)')
+        .slide
+          .slide__inner
+            .slide__content
+              .slide__content-img(style='background-image:url(./assets/images/gallery/1.png)')
+            .slide__img
+              .slide__img-inner(style='background-image:url(./assets/images/gallery/1.png)')
+        .slide
+          .slide__inner
+            .slide__content
+              .slide__content-img(style='background-image:url(./assets/images/gallery/2.png)')
+            .slide__img
+              .slide__img-inner(style='background-image:url(./assets/images/gallery/2.png)')
+        .slide
+          .slide__inner
+            .slide__content
+              .slide__content-img(style='background-image:url(./assets/images/gallery/3.png)')
+            .slide__img
+              .slide__img-inner(style='background-image:url(./assets/images/gallery/3.png)')
 
 block header
   include ../includes/header.pug

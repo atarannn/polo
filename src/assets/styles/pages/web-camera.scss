@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--offset20) var(--offset20);
   padding: var(--offset60) 0 0;
-  margin-bottom: 100px;
+  margin-bottom: var(--top-offset100);
   @include to(1180px) {
     grid-template-columns: 1fr;
   }
@@ -22,6 +22,9 @@
       border-radius: var(--border-radius-2);
       @include to(1440px) {
         height: 450px;
+      }
+      @include to(680px) {
+        height: 360px;
       }
       video {
         margin: 0!important;

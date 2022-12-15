@@ -16,6 +16,9 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    @include to(680px) {
+      height: 40%;
+    }
     .date {
       display: flex;
       align-items: flex-start;
@@ -100,6 +103,12 @@
       top: 0;
       cursor: pointer;
       transition: background .3s ease-in-out;
+      @include to(680px) {
+        height: 50px;
+        width: 50px;
+        right: var(--offset20);
+        top: var(--offset20);
+      }
       svg {
         stroke: $light;
       }
@@ -123,10 +132,18 @@
         left: 40px;
         bottom: 40px;
       }
+      @include to(680px) {
+        left: calc(var(--offset20)*2);
+        bottom: calc(var(--offset20)*2);
+      }
       .orange-btn {
         height: var(--btn-h);
         width: var(--btn-h);
         cursor: pointer;
+        @include to(680px) {
+          height: 50px;
+          width: 50px;
+        }
         &.swiper-button-disabled {
           cursor: no-drop;
         }
@@ -197,6 +214,10 @@
       .orange-btn {
         height: var(--header-btn-h);
         width: var(--header-btn-w);
+        font-size: var(--font14);
+        @include to(680px) {
+          width: 120px;
+        }
         svg {
           fill: $wc;
           stroke: $wc;
@@ -212,6 +233,9 @@
     grid-template-columns: 1fr 1fr;
     column-gap: var(--offset32);
     row-gap: var(--offset32);
+    @include to(680px) {
+      grid-template-columns: 1fr;
+    }
     &.progress-list {
       li {
         display: flex;
@@ -293,6 +317,9 @@
     @include to(1440px) {
       height: 400px;
     }
+    @include to(680px) {
+      flex-direction: column;
+    }
     @include from(1023px) {
       &:hover {
         .right {
@@ -305,10 +332,16 @@
     }
     .left, .right {
       width: 50%;
+      @include to(680px) {
+        width: 100%;
+      }
     }
     .right {
       overflow: hidden;
       border-radius: var(--border-radius-3);
+      @include to(680px) {
+        height: 60%;
+      }
       img {
         height: 436px;
         border-radius: var(--border-radius-3);

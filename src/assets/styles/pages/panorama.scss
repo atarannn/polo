@@ -7,6 +7,9 @@
     @include to(1180px) {
       padding: var(--offset50) 50px;
     }
+    @include to(680px) {
+      padding: var(--offset20) var(--offset20);
+    }
   }
   .panorama {
     background: $orange-light;

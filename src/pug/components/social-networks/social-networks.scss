@@ -5,6 +5,9 @@
   padding: var(--offset32);
   height: auto;
   width: fit-content;
+  @include to(1180px) {
+    padding: 24px;
+  }
   ul {
     display: flex;
     flex-direction: column;
@@ -16,6 +19,9 @@
       font-size: var(--font14);
       line-height: 120%;
       text-transform: uppercase;
+      @include to(1180px) {
+        font-size: 14px;
+      }
       a {
         color: $light;
         transition: color .3s ease-in-out;

@@ -34,6 +34,28 @@
       align-items: center;
       justify-content: flex-start;
       gap: var(--offset32);
+      @include to(1180px) {
+        display: none;
+      }
+      &-mobile {
+        display: none;
+        @include font-light;
+        font-size: var(--font128);
+        color: $light;
+        line-height: 100%;
+        text-transform: uppercase;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 75%;
+        gap: 12px;
+        @include to(1180px) {
+          display: flex;
+        }
+        @include to(680px) {
+          width: 55%;
+        }
+      }
     }
     .social-networks {
       position: absolute;
@@ -50,9 +72,24 @@
     justify-content: space-between;
     gap: var(--offset20);
     position: relative;
+    @include to(1180px) {
+      flex-direction: column;
+      gap: 200px;
+    }
+    @include to(680px) {
+      gap: 115px;
+    }
+  }
+  .images-section-right {
+    .img {
+      border-radius: var(--border-radius);
+    }
   }
   .images-section-left, .images-section-right {
     width: 50%;
+    @include to(1180px) {
+      width: 100%;
+    }
     .img {
       width: 100%;
       object-fit: contain;
@@ -77,11 +114,23 @@
     left: 0;
     z-index: 1;
     width: 50%;
+    @include to(1180px) {
+      left: 50%;
+      top: 37%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
   .right-svg {
     right: 0;
     z-index: 3;
     width: 53%;
+    @include to(1180px) {
+      left: 50%;
+      top: 54%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
   &-left {
     z-index: 1;
@@ -102,6 +151,11 @@
       left: -35%;
       transform: translateY(-50%);
       z-index: -1;
+      @include to(1180px) {
+        top: -45%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 }
@@ -110,6 +164,9 @@
   padding: 300px 0;
   @include to(1440px) {
     padding: 250px 0;
+  }
+  @include to(1180px) {
+    padding: 60px 20px;
   }
   &-wrapper {
     display: flex;
@@ -122,10 +179,13 @@
   .bg-svg {
     position: absolute;
     z-index: -1;
-    left: 10%;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    width: auto;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    @include to(1180px) {
+      display: none;
+    }
   }
   &-center {
     display: flex;
@@ -152,12 +212,18 @@
       font-size: var(--font14);
       width: 40%;
       text-align: center;
+      @include to(1080px) {
+        width: 60%;
+      }
     }
     .orange-btn {
       width: var(--btn-w);
       height: var(--btn-h);
       margin-top: 32px;
       font-size: var(--font20);
+      @include to(1180px) {
+        font-size: 20px;
+      }
     }
   }
   &-left, &-right {
@@ -172,6 +238,9 @@
     @include to(1440px) {
       top: -70%;
     }
+    @include to(1180px) {
+      display: none;
+    }
   }
   &-left {
     left: calc(var(--ap-offset)/2);
@@ -185,6 +254,10 @@
   padding-bottom: var(--offset210);
 }
 
+.about.section-offset.section-top-offset {
+  padding-top: 0;
+}
+
 .about {
   display: flex;
   align-items: center;
@@ -193,6 +266,15 @@
   gap: var(--offset20);
   @include to(1180px) {
     flex-direction: column;
+  }
+  &-right .about-content {
+    @include to(1180px) {
+      flex-direction: column-reverse;
+      .subtitle {
+        margin-top: 0;
+        margin-bottom: auto;
+      }
+    }
   }
   &-left, &-right {
     width: 50%;
@@ -205,6 +287,9 @@
     }
     @include to(1180px) {
       width: 100%;
+    }
+    @include to(680px) {
+      height: 360px;
     }
   }
   &-left {

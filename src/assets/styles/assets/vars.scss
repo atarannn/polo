@@ -55,6 +55,10 @@ $grey: #6C7A88;
 
 @media screen and (max-width: 1440px) {
   :root {
+    --border-radius: 40px;
+    --border-radius-2: 40px;
+    --border-radius-3: 20px;
+
     --top-offset20: 20px;
     --top-offset40: 30px;
     --top-offset100: 70px;
@@ -74,19 +78,19 @@ $grey: #6C7A88;
 
     --font14: 12px;
     --font18: 14px;
-    --font20: 14px;
-    --font24: 18px;
-    --font28: 18px;
-    --font32: 22px;
-    --font40: 24px;
-    --font72: 48px;
-    --font96: 56px;
-    --font128: 72px;
+    --font20: 18px;
+    --font24: 20px;
+    --font28: 24px;
+    --font32: 28px;
+    --font40: 32px;
+    --font72: 56px;
+    --font96: 72px;
+    --font128: 96px;
 
     --smarto-h: 50px;
 
-    --btn-h: 50px;
-    --btn-w: 200px;
+    --btn-h: 60px;
+    --btn-w: 260px;
     --btn-big: 70px;
     --btn-circle: 150px;
 
@@ -97,44 +101,89 @@ $grey: #6C7A88;
 
 @media screen and (max-width: 1180px) {
   :root {
-    --border-radius: 40px;
-    --border-radius-2: 30px;
-    --border-radius-3: 20px;
+    --border-radius: 12px;
+    --border-radius-2: 12px;
+    --border-radius-3: 12px;
 
     --top-offset20: 10px;
     --top-offset40: 30px;
     --top-offset100: 50px;
 
-    --offset20: 10px;
+    --offset20: 20px;
     --offset32: 20px;
     --offset50: 20px;
-    --offset60: 40px;
-    --offset140: 50px;
-    --offset210: 70px;
+    --offset60: 20px;
+    --offset140: 20px;
+    --offset210: 20px;
 
     --heafer-h: 60px;
     --header-font14: 12px;
     --header-btn-h: 36px;
-    --header-btn-w: 130px;
-    --logo-h: 32px;
+    --header-btn-w: 36px;
+    --logo-h: 36px;
 
     --font14: 12px;
     --font18: 14px;
     --font20: 14px;
     --font24: 18px;
-    --font28: 18px;
-    --font32: 20px;
-    --font40: 22px;
+    --font28: 20px;
+    --font32: 24px;
+    --font40: 28px;
     --font72: 32px;
     --font96: 56px;
     --font128: 72px;
 
-    --smarto-h: 50px;
+    --smarto-h: 60px;
 
-    --btn-h: 50px;
-    --btn-w: 200px;
+    --btn-h: 60px;
+    --btn-w: 260px;
     --btn-big: 70px;
     --btn-circle: 150px;
+
+    --ap-offset: 5%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  :root {
+    --border-radius: 12px;
+    --border-radius-2: 12px;
+    --border-radius-3: 12px;
+
+    --top-offset20: 10px;
+    --top-offset40: 20px;
+    --top-offset100: 20px;
+
+    --offset20: 12px;
+    --offset32: 12px;
+    --offset50: 12px;
+    --offset60: 12px;
+    --offset140: 12px;
+    --offset210: 20px;
+
+    --heafer-h: 60px;
+    --header-font14: 12px;
+    --header-btn-h: 36px;
+    --header-btn-w: 36px;
+    --logo-h: 36px;
+
+    --font14: 12px;
+    --font18: 12px;
+    --font20: 12px;
+    --font24: 14px;
+    --font28: 14px;
+    --font32: 18px;
+    --font40: 18px;
+    --font72: 28px;
+    --font96: 32px;
+    --font128: 36px;
+
+    --smarto-h: 60px;
+
+    --btn-h: 60px;
+    --btn-w: 260px;
+    --btn-big: 60px;
+    --btn-circle: 100px;
 
     --ap-offset: 5%;
   }

@@ -32,6 +32,11 @@
     svg {
       stroke: $light;
     }
+    @include to(1180px) {
+      right: var(--offset20);
+      height: 50px;
+      width: 50px;
+    }
     @include from(1023px) {
       &:hover {
         background: $orange-light;
@@ -45,6 +50,9 @@
     height: 100%;
     margin-left: auto;
     background: $wc;
+    @include to(1180px) {
+      width: 100%;
+    }
     form {
       position: absolute;
       left: 50%;
@@ -55,6 +63,9 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      @include to(1180px) {
+        width: 85%;
+      }
       .form-field__input {
         color: $grey;
         &::placeholder {
@@ -108,6 +119,9 @@ form {
   width: 100%;
   height: var(--btn-h);
   font-size: var(--font20);
+  @include to(1180px) {
+    font-size: 20px;
+  }
 }
 .form-field:not(#t) {
   position: relative;
@@ -301,6 +315,9 @@ form {
     align-items: center;
     justify-content: center;
     position: relative;
+    @include to(1180px) {
+      width: 85%;
+    }
     .top {
       top: 0;
     }

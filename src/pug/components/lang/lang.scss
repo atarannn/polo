@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include to(1180px) {
+    order: 1;
+  }
   li {
     @include font-medium;
     font-size: var(--header-font14);

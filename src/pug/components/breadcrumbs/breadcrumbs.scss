@@ -14,6 +14,9 @@
     font-size: var(--font24);
     padding: 0 24px;
     transition: color .3s ease-in-out;
+    @include to(1180px) {
+      padding: 0 12px;
+    }
   }
   .breadcrumbs-item {
     @include font-regular;

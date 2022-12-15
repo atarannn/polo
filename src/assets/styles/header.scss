@@ -13,6 +13,11 @@
   background-color: $dark;
   backdrop-filter: blur(25px);
   border-radius: 100px;
+  @include to(1180px) {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
   &-logo {
     img {
       height: var(--logo-h);
@@ -25,6 +30,12 @@
     align-items: center;
     justify-content: flex-end;
     gap: 40px;
+    @include to(1440px) {
+      gap: 20px;
+    }
+    @include to(680px) {
+      gap: 8px;
+    }
     .header-location {
       @include font-medium;
       font-size: var(--header-font14);
@@ -35,6 +46,15 @@
       justify-content: flex-start;
       gap: 12px;
       transition: color .3s ease-in-out;
+      @include to(1180px) {
+        font-size: var(--header-font14);
+        height: var(--header-btn-h);
+        width: var(--header-btn-w);
+        border: 1px solid rgba(108, 122, 136, 0.5);
+        justify-content: center;
+        border-radius: 6px;
+        order: 2;
+      }
       svg {
         stroke: $light;
         height: 16px;
@@ -58,6 +78,9 @@
       border: 1px solid rgba(108, 122, 136, 0.5);
       background: transparent;
       transition: border .3s ease-in-out, background .3s ease-in-out;
+      @include to(1180px) {
+        order: 3;
+      }
       @include from(1023px) {
         &:hover {
           border: 1px solid $orange-light;
@@ -70,12 +93,27 @@
       height: var(--header-btn-h);
       width: var(--header-btn-w);
       font-size: var(--header-font14);
+      @include to(1180px) {
+        order: 5;
+      }
     }
     .tell-btn {
       @include font-medium;
       line-height: 120%;
       color: $light;
       transition: color .3s ease-in-out;
+      @include to(1180px) {
+        font-size: var(--header-font14);
+        height: var(--header-btn-h);
+        width: var(--header-btn-w);
+        border: 1px solid rgba(108, 122, 136, 0.5);
+        justify-content: center;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 4;
+      }
       @include from(1023px) {
         &:hover {
           color: $orange-light;
@@ -95,6 +133,19 @@
       text-transform: uppercase;
       cursor: pointer;
       transition: color .3s ease-in-out;
+      @include to(1180px) {
+        gap: 12px;
+        font-size: var(--header-font14);
+        height: var(--header-btn-h);
+        width: var(--header-btn-w);
+        border: 1px solid rgba(108, 122, 136, 0.5);
+        justify-content: center;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        order: 6;
+      }
       @include from(1023px) {
         &:hover {
           color: $orange-light;
@@ -116,6 +167,9 @@
         @include to(1440px) {
           width: 20px;
         }
+        @include to(1180px) {
+          width: 16px;
+        }
         span {
           display: flex;
           flex-direction: column;
@@ -132,11 +186,17 @@
             @include to(1440px) {
               margin-bottom: 4px;
             }
+            @include to(1180px) {
+              margin-bottom: 2px;
+            }
           }
           &:last-child {
             margin-top: 6px;
             @include to(1440px) {
               margin-top: 4px;
+            }
+            @include to(1180px) {
+              margin-top: 2px;
             }
           }
         }

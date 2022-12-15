@@ -2,6 +2,19 @@
   padding: var(--top-offset100) var(--offset20) 0;
   margin-bottom: var(--top-offset100);
   position: relative;
+  .card-style {
+    @include to(1180px) {
+      height: 500px;
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+    @include to(680px) {
+      height: 360px;
+    }
+  }
   .btn-up {
     position: absolute;
     bottom: 0;
@@ -42,6 +55,12 @@
   justify-content: space-between;
   width: 100%;
   gap: var(--offset20);
+  @include to(1180px) {
+    flex-direction: column;
+    .characteristics-left, .characteristics-right, .infrastructure-left, .infrastructure-right {
+      width: 100%;
+    }
+  }
   .pony {
     position: absolute;
     left: 50%;
@@ -49,6 +68,9 @@
     height: 80%;
     transform: translateX(-50%);
     z-index: -1;
+    @include to(680px) {
+      display: none;
+    }
   }
   svg {
     height: 217px;
@@ -62,21 +84,57 @@
       width: 150px;
       top: calc(-1*(150px/2));
     }
+    @include to(680px) {
+      display: none;
+    }
   }
   &-left, &-right {
     width: 50%;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 40%;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(18, 21, 24, 0) 0%, rgba(18, 21, 24, 0.9) 100%);
+      z-index: 0;
+    }
   }
-  &-title {
+  &-title-wrapper {
+    position: absolute;
     left: 119px;
     bottom: 100px;
     z-index: 1;
+    width: 70%;
+    @include to(1180px) {
+      width: 50%;
+    }
+    @include to(680px) {
+      width: 80%;
+    }
+    .title {
+      position: static;
+      max-width: 100%;
+    }
+    .text {
+      @include font-regular;
+      color: #C0D1E1;
+      font-size: var(--font24);
+      line-height: 120%;
+      margin-top: var(--offset20);
+    }
     @include to(1440px) {
+      left: 80px;
+      bottom: 80px;
+    }
+    @include to(1180px) {
       left: 50px;
       bottom: 50px;
     }
-    @include to(1180px) {
-      left: 30px;
-      bottom: 30px;
+    @include to(680px) {
+      left: 20px;
+      bottom: 20px;
     }
   }
 }
@@ -85,38 +143,91 @@
   width: 100%;
   .card-style {
     width: 100%;
+    &.bg-right {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(270deg, rgba(10, 11, 13, 0.8) 0%, rgba(10, 11, 13, 0) 100%);
+        z-index: 0;
+        @include to(680px) {
+          width: 100%;
+        }
+      }
+    }
+    &.bg-left {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 40%;
+        background: linear-gradient(270deg, rgba(10, 11, 13, 0) 0%, rgba(10, 11, 13, 0.8) 100%);
+        z-index: 0;
+        @include to(680px) {
+          width: 100%;
+        }
+      }
+    }
   }
-  &-title-2 {
-    @include font-light;
-    color: $light;
-    font-size: var(--font72);
-    line-height: 120%;
-    left: var(--offset50);
+  &-title-2-wrapper {
+    position: absolute;
+    left: 119px;
     top: 50%;
     transform: translateY(-50%);
-    &.title {
-      max-width: 30%;
+    max-width: 25%;
+    z-index: 1;
+    .title {
+      position: static;
+      max-width: 100%;
+    }
+    .text {
+      @include font-regular;
+      color: #C0D1E1;
+      font-size: var(--font24);
+      line-height: 120%;
+      margin-top: var(--offset20);
+    }
+    @include to(1440px) {
+      left: 80px;
+    }
+    @include to(1180px) {
+      left: 50px;
+      max-width: 35%;
+    }
+    @include to(680px) {
+      left: 20px;
+      max-width: 60%;
     }
   }
   &-title-wrapper {
     position: absolute;
-    right: 6%;
+    right: 5%;
     top: 50%;
     transform: translateY(-50%);
     max-width: 20%;
+    z-index: 1;
     @include to(1180px) {
       max-width: 35%;
+    }
+    @include to(680px) {
+      max-width: 60%;
     }
     .title {
       position: static;
       max-width: 100%;
+      text-align: right;
       &.text-align-right {
         text-align: right;
       }
     }
     .text {
       @include font-regular;
-      color: $light;
+      color: #C0D1E1;
       font-size: var(--font24);
       line-height: 120%;
       margin-top: var(--offset20);
