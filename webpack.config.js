@@ -6,6 +6,7 @@ const config = {
   entry: {
     index: './src/assets/scripts/index-app.js',
     map: './src/assets/scripts/map.js',
+    FullScreenScroll: './src/assets/scripts/FullScreenScroll.js',
   },
   output: {
     filename: '[name].bundle.js',
