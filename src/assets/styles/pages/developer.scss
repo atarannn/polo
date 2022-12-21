@@ -102,6 +102,61 @@
       width: 100%;
     }
   }
+  .developer-list-mob {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    @include to(680px) {
+      display: flex;
+    }
+    .slider-btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      .orange-btn {
+        height: 50px;
+        width: 50px;
+        svg {
+          width: 50%;
+        }
+      }
+    }
+    .developer-list-item {
+      background: $wc;
+      border-radius: var(--border-radius-2);
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--offset20);
+      padding: 0 var(--offset50);
+      .img {
+        height: 100px;
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        span {
+          @include font-medium;
+          color: $orange-light;
+          line-height: 120%;
+          font-size: var(--font24);
+        }
+        p {
+          @include font-regular;
+          color: $dark;
+          line-height: 120%;
+          font-size: var(--font24);
+        }
+      }
+    }
+  }
   .developer-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -110,7 +165,7 @@
       grid-template-columns: repeat(3, 1fr);
     }
     @include to(680px) {
-      grid-template-columns: repeat(2, 1fr);
+      display: none;
     }
     &-item {
       background: $wc;
@@ -278,7 +333,6 @@
           @include to(1180px) {
             height: auto;
             object-position: center;
-            border: 20px solid rgb(0 0 0 / 35%);
           }
         }
         .svg {
@@ -349,7 +403,7 @@
     position: relative;
     height: 100vh;
     @include to(1180px) {
-      height: 50vh;
+      height: 30vh;
     }
     img {
       position: absolute;

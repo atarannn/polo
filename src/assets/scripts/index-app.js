@@ -119,10 +119,12 @@ form.forEach((form) => {
       },
     });
 
-    $form.querySelector('.js-mask-absolute').addEventListener('click', () => {
-      $form.querySelector('[name="phone"]').focus();
-      $form.querySelector('.js-mask-absolute').style.display = 'none';
-    }, false);
+    $form.querySelectorAll('.js-mask-absolute').forEach(el => {
+      el.addEventListener('click', () => {
+        $form.querySelector('[name="phone"]').focus();
+        $form.querySelector('.js-mask-absolute').style.display = 'none';
+      }, false);
+    })
   }
 });
 

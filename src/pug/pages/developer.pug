@@ -26,6 +26,7 @@ block scripts
   script(defer src='./assets/scripts/menu.js')
   script(defer src='./assets/scripts/footer.js')
   script(defer src='./assets/scripts/arrow-down.js')
+  script(defer src='./assets/scripts/developer.js')
 block content
   .page-offset
     include ../components/breadcrumbs/breadcrumbs.pug
@@ -48,6 +49,42 @@ block content
           </svg>
       #developer-list-wrapper.developer-list-wrapper
         h5.developer-list-title Наши партнеры и поставщики
+        .developer-list-mob.js-slider
+          .swiper-wrapper
+            .swiper-slide.developer-list-item
+              img(src="./assets/images/developer/1.svg").img
+              .text
+                span 01
+                p Bobcat
+            .swiper-slide.developer-list-item
+              img(src="./assets/images/developer/2.svg").img
+              .text
+                span 02
+                p Manitou Group
+            .swiper-slide.developer-list-item
+              img(src="./assets/images/developer/3.svg").img
+              .text
+                span 03
+                p JCB
+            .swiper-slide.developer-list-item
+              img(src="./assets/images/developer/4.svg").img
+              .text
+                span 04
+                p Knauf
+            .swiper-slide.developer-list-item
+              img(src="./assets/images/developer/5.svg").img
+              .text
+                span 05
+                p Fundermax
+          .slider-btn-wrapper
+            .btn-swiper-left(data-prev).orange-btn.btn
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11.5554L2 11.5554M2 11.5554L12 1.00027M2 11.5554L12 21" stroke="#E3EBF3" stroke-width="2"/>
+              </svg>
+            .btn-swiper-right(data-next).orange-btn.btn
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M-4.12836e-07 10.4446L20 10.4446M20 10.4446L10 20.9997M20 10.4446L10 1" stroke="#E3EBF3" stroke-width="2"/>
+              </svg>
         ul.developer-list
           li.developer-list-item
             img(src="./assets/images/developer/1.svg").img
