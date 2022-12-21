@@ -266,18 +266,19 @@
         position: relative;
         width: auto;
         border-radius: var(--border-radius);
-        overflow: hidden;
-        img {
+        .img {
           height: 800px;
           width: 100%;
           object-fit: contain;
           object-position: left;
+          border-radius: var(--border-radius);
           @include to(1440px) {
             height: 600px;
           }
           @include to(1180px) {
             height: auto;
             object-position: center;
+            border: 20px solid rgb(0 0 0 / 35%);
           }
         }
         .svg {

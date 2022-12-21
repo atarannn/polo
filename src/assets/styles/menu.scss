@@ -24,6 +24,7 @@
       bottom: 0;
       z-index: -1;
       width: 100vw;
+      text-align: center;
       @include to(1440px) {
         font-size: 500px;
       }

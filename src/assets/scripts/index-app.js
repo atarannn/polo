@@ -24,25 +24,25 @@ if(document.documentElement.clientWidth > 1180) {
 var myAnimation = new hoverEffect({
   parent: document.querySelector('#about .about-left.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: './assets/images/home/section-2/1.png',
-  image2: './assets/images/home/section-2/1-hover.png',
-  displacementImage: './assets/images/home/section-2/1-hover.png'
+  image1: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1.png',
+  image2: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-hover.png',
+  displacementImage: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-hover.png'
 });
 
 var myAnimation2 = new hoverEffect({
   parent: document.querySelector('#about .about-right.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: './assets/images/home/section-2/2.png',
-  image2: './assets/images/home/section-2/2-hover.png',
-  displacementImage: './assets/images/home/section-2/2-hover.png'
+  image1: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2.png',
+  image2: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-hover.png',
+  displacementImage: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-hover.png'
 });
 
 var myAnimation2 = new hoverEffect({
   parent: document.querySelector('#about-2 .about-right.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: './assets/images/home/section-5/2.png',
-  image2: './assets/images/home/section-5/2-hover.png',
-  displacementImage: './assets/images/home/section-5/2-hover.png'
+  image1: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2.png',
+  image2: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2-hover.png',
+  displacementImage: 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2-hover.png'
 });
 
 const form = [

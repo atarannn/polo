@@ -16,8 +16,6 @@ export const eases = {
 export const langDetect = () => {
   if (window.location.pathname.match(/\/en\//)) {
     return 'en';
-  } if (window.location.pathname.match(/\/ru\//)) {
-    return 'ru';
   }
-  return 'en';
+  return 'ru';
 };
