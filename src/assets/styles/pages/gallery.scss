@@ -59,4 +59,7 @@ body.class-page-gallery {
   justify-content: center;
   z-index: 1;
   gap: 24px;
+  @include to(680px) {
+    display: none;
+  }
 }
