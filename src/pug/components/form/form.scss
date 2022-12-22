@@ -119,6 +119,7 @@ form {
   width: 100%;
   height: var(--btn-h);
   font-size: var(--font20);
+  cursor: pointer;
   @include to(1180px) {
     font-size: 20px;
   }

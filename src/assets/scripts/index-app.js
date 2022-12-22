@@ -109,12 +109,6 @@ form.forEach((form) => {
             valid: false,
             error: [],
           },
-          comment: {
-            inputWrapper: new SexyInput({ animation: 'none', $field: $form.querySelector('[data-field-comment]') }),
-            defaultMessage: i18next.t('comment'),
-            valid: false,
-            error: [],
-          },
         },
       },
     });
