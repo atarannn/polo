@@ -25,12 +25,14 @@ block scripts
   script(defer src='./assets/scripts/loader.js')
   script(defer src='./assets/scripts/menu.js')
   script(defer src='./assets/scripts/footer.js')
+  script(defer src='./assets/scripts/text-animation.js')
+  script(defer src='./assets/scripts/rotate-animation.js')
 block content
   .page-offset
     include ../components/breadcrumbs/breadcrumbs.pug
   .characteristics-wrapper
     .characteristics.reletive
-      <svg width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="rotate" width="217" height="217" viewBox="0 0 217 217" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="108.5" cy="108.5" r="85" stroke="#6C7A88" stroke-width="47" stroke-dasharray="1 38"/>
       <circle cx="108.5" cy="108.5" r="50.0796" transform="rotate(10.6372 108.5 108.5)" stroke="#6C7A88" stroke-width="26" stroke-dasharray="1 24"/>
       <circle cx="108.5" cy="108.5" r="29.6521" stroke="#6C7A88" stroke-width="16" stroke-dasharray="1 13"/>

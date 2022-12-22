@@ -38,11 +38,22 @@
       &-btn {
         height: var(--btn-h);
         width: var(--btn-h);
+        @include to(680px) {
+          height: 36px;
+          width: 36px;
+          svg {
+            height: 16px;
+          }
+        }
         svg {
           stroke: $light;
           fill: $light;
           height: 24px;
           width: 24px;
+          @include to(680px) {
+            height: 16px;
+            width: 16px;
+          }
         }
       }
     }
