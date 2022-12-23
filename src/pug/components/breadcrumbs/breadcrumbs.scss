@@ -7,6 +7,7 @@
     stroke: $grey;
     transition: stroke .3s ease-in-out;
     height: var(--font24);
+    cursor: pointer;
   }
   span {
     @include font-regular;

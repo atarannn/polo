@@ -11,8 +11,6 @@
     .to('.apartments-section-left', { y: 150, x: -20,  duration: 3 }, '<')
     .to('.apartments-section-right', { y: 150, x: 20,  duration: 3 }, '<')
 
-
-
   if (document.documentElement.clientWidth > 1180) {
     gsap
       .timeline({

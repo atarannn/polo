@@ -4,6 +4,8 @@
   height: calc(100vh - var(--heafer-h) - var(--offset20) - calc(var(--offset20)/2) - var(--smarto-h));
   .breadcrumbs {
     padding: var(--offset50) 119px;
+    z-index: 2;
+    position: absolute;
     @include to(1180px) {
       padding: var(--offset50) 50px;
     }
@@ -13,12 +15,17 @@
   }
   .panorama {
     background: $orange-light;
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     border-radius: var(--border-radius-2);
+    overflow: hidden;
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
   }
 }
