@@ -133,7 +133,7 @@ function $popupSlide(data, img) {
 
 async function initBuildProgressLayout(config) {
   const state = {
-    queryAction: 'construction',
+    queryAction: 'constructions',
     cardsContainer: document.querySelector('.construction_progress-list'),
     cardSelector: '[data-open-construction-progress]',
     template: $card,
