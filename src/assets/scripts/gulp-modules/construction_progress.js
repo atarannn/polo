@@ -88,13 +88,13 @@ function $card(data, index) {
             <div class="year" data-year="">${data.data.year}</div>
           </div>
         </div>
-        <div class="text" data-test="">Монтаж лифтов. Продолжается устройство систем отопления, вентиляции, водопровода, канализации и электричества. Проходят фасадные работы на торцах. Устройство утепления на балконах.</div>
+        <div class="text" data-test="">${data.data.text}</div>
         <div class="bottom">
           <div class="photo-num">
-            <p data-photo="">${data.data.gallery.filter(el => el.match(/jpg|png/)).length}</p>фото
+            <p data-photo="">${data.data.count}</p>${data.data.btn['img']}
           </div>
           <div class="video-num">
-            <p data-video="">${data.data.gallery.filter(el => el.match(/mp4/)).length}</p>видео
+            <p data-video="">${data.data.count_videos}</p>${data.data.btn['video']}
           </div>
         </div>
       </div>
@@ -103,8 +103,7 @@ function $card(data, index) {
   `;
 }
 
-function $popupSlide(data, img) {
-  const isVideo = img.match(/mp4/);
+function $popupSlide(data, img, isVideo) {
 
   const imageLayout = isVideo ?
     `<iframe
@@ -172,7 +171,8 @@ initBuildProgressLayout({
     popup.querySelectorAll('[data-day]').forEach(el => el.textContent = data.data.day);
     popup.querySelectorAll('[data-month]').forEach(el => el.textContent = data.data.month);
     popup.querySelectorAll('[data-year]').forEach(el => el.textContent = data.data.year);
-    popup.querySelector('.swiper-wrapper').innerHTML = data.data.gallery.map(el => $popupSlide(data, el)).join('');
+    popup.querySelector('.swiper-wrapper').innerHTML = data.data.gallery.map(el => $popupSlide(data, el, false)).join('');
+    popup.querySelector('.swiper-wrapper').innerHTML += data.data.videos.map(el => $popupSlide(data, el, true)).join('');
     swiper.update();
     swiper.slideTo(0);
   }

@@ -263,18 +263,22 @@
               fill: $dark;
               stroke: $orange-light;
               stroke-width: 2;
-              &.class-74 {
-                stroke-dasharray: 310, 150;
-              }
-              &.class-62 {
-                stroke-dasharray: 230, 250;
-              }
-              &.class-25 {
-                stroke-dasharray: 110, 450;
-              }
-              &.class-17 {
-                stroke-dasharray: 70, 500;
-              }
+              // --percent: 407.747314453125
+              --percent: 0;
+              stroke-dasharray: 407.747314453125, 407.747314453125;
+              stroke-dashoffset: calc(407.747314453125 - var(--percent) * 407.7473 / 100);
+              // &.class-74 {
+              //   stroke-dasharray: 310, 150;
+              // }
+              // &.class-62 {
+              //   stroke-dasharray: 230, 250;
+              // }
+              // &.class-25 {
+              //   stroke-dasharray: 110, 450;
+              // }
+              // &.class-17 {
+              //   stroke-dasharray: 70, 500;
+              // }
             }
           }
           span {
