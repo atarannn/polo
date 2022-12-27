@@ -3,7 +3,8 @@ import { getMarkers } from '../api';
 import { MARKER_ICONS, MAP_ICONS_NAME } from './iconsMap';
 import { mapsFiltersView } from './mapsFiltersView';
 
-const mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBc_rcO6jcFuCN8AJ9EZLlXENtUDSAcuiw&ver=1655409542';
+// const mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDa7y9eC6NQJRPQRcmTamcqoFgNv6MK1Qo&ver=1655409542';
+const mapSrc = 'https://maps.googleapis.com/maps/api/js';
 
 const mapScript = document.createElement('script');
 mapScript.src = mapSrc;
@@ -33,7 +34,7 @@ async function initMap() {
   }));
   const mainMarker = {
     type: 'main',
-    coords: [41.617250, 41.637001],
+    coords: [41.610250, 41.637001],
     name: 'Polo',
   };
   const uluru = { lat: +mainMarker.coords[0], lng: +mainMarker.coords[1] };
@@ -50,9 +51,10 @@ async function initMap() {
     icon: MARKER_ICONS.main,
   });
   const DIRECTIONS_SERVIE = new google.maps.DirectionsService();
-  const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map });
+  const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: "#E17427" } });
   const locationsWithMarkers = locations.map((item) => {
     const iconUrl = MARKER_ICONS[item.type];
+    console.log(item);
     const marker = new google.maps.Marker({
       position: {
         lat: +item.coords[0],
