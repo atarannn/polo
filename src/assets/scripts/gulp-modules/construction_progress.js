@@ -46,6 +46,13 @@ function popupInit() {
   document.querySelectorAll('[data-close-construction-progress]').forEach(elem => {
     elem.addEventListener('click', () => popupClose(popup));
   });
+  window.addEventListener('keyup', (e) => {
+    if (e.keyCode == 27) {
+      if (popup[0] && popup[0].classList.contains('active')) {
+        popupClose(popup)
+      }
+    }
+  })
 }
 
 
@@ -172,7 +179,7 @@ initBuildProgressLayout({
     popup.querySelectorAll('[data-month]').forEach(el => el.textContent = data.data.month);
     popup.querySelectorAll('[data-year]').forEach(el => el.textContent = data.data.year);
     popup.querySelector('.swiper-wrapper').innerHTML = data.data.gallery.map(el => $popupSlide(data, el, false)).join('');
-    popup.querySelector('.swiper-wrapper').innerHTML += data.data.videos.map(el => $popupSlide(data, el, true)).join('');
+    popup.querySelector('.swiper-wrapper').innerHTML += Array.isArray(data.data.videos) ? data.data.videos.map(el => $popupSlide(data, el, true)).join('') : '';
     swiper.update();
     swiper.slideTo(0);
   }
