@@ -14,12 +14,16 @@ gsap.registerPlugin(ScrollTrigger);
 global.axios = axios;
 
 const isDev = document.documentElement.dataset.mode === 'dev';
-if(document.documentElement.clientWidth > 1180) {
-  motionHoverEffect(
-    document.querySelector('.menu'),
-    document.querySelector('.menu-list')
-  )
-}
+
+window.addEventListener('menu-open', () => {
+  
+  if(document.documentElement.clientWidth > 1180) {
+    motionHoverEffect(
+      document.querySelector('.menu'),
+      document.querySelector('.menu-list')
+    )
+  }
+}, { once: true })
 
 var myAnimation = new hoverEffect({
   parent: document.querySelector('#about .about-left.card-style.js-hover-card-animation'),

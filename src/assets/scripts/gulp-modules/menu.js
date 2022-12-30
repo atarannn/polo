@@ -1,4 +1,5 @@
 function menuOpen(menu) {
+  window.dispatchEvent(new Event('menu-open'));
   menu.forEach(el => {
     menuOpenAnim();
     document.querySelector('body').style.overflow = 'hidden';

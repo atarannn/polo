@@ -10,7 +10,89 @@ block variable
         label: 'Застройщик',
         link: pagesLink[0].developer
       }
-    ]
+    ];
+
+    var partners = [
+        {
+          "title": "Bobcat",
+          "logo": "/assets/images/developer/1.svg"
+        },
+        {
+          "title": "Manitou Group",
+          "logo": "/assets/images/developer/2.svg"
+        },
+        {
+          "title": "JCB",
+          "logo": "/assets/images/developer/3.svg"
+        },
+        {
+          "title": "Knauf",
+          "logo": "/assets/images/developer/4.svg"
+        },
+        {
+          "title": "Fundermax",
+          "logo": "/assets/images/developer/5.svg"
+        },
+        {
+          "title": "BASF",
+          "logo": "/assets/images/developer/partners/basf.svg"
+        },
+        {
+          "title": "Hekim Yapi",
+          "logo": "/assets/images/developer/partners/Hekim Yapi.svg"
+        },
+        {
+          "title": "Mitsubishi Electric",
+          "logo": "/assets/images/developer/partners/Mitsubishi Electric.svg"
+        },
+        {
+          "title": "Siemens",
+          "logo": "/assets/images/developer/partners/siemens.svg"
+        },
+        {
+          "title": "Rockwool",
+          "logo": "/assets/images/developer/partners/rockwool.svg"
+        },
+        {
+          "title": "Tikkurila",
+          "logo": "/assets/images/developer/partners/Tikkurila_logo 2.svg"
+        },
+        {
+          "title": "Kone",
+          "logo": "/assets/images/developer/partners/KONE 1.svg"
+        },
+        {
+          "title": "Isomat",
+          "logo": "/assets/images/developer/partners/isomat-s-a-logo-vector 1.svg"
+        },
+        {
+          "title": "Tyvek",
+          "logo": "/assets/images/developer/partners/Dupont_Tyvek_logo 1.svg"
+        },
+        {
+          "title": "Vitex",
+          "logo": "/assets/images/developer/partners/vitex.svg"
+        },
+        {
+          "title": "Sch\u00fcco",
+          "logo": "/assets/images/developer/partners/Schuco.svg"
+        },
+        {
+          "title": "Caparol",
+          "logo": "/assets/images/developer/partners/caparol 1.svg"
+        },
+        {
+          "title": "Trespa",
+          "logo": "/assets/images/developer/partners/trespa-logo-vector 1.svg"
+        },
+        {
+          "title": "Sveza",
+          "logo": "/assets/images/developer/partners/sveza_logo_rgb-01 1.svg"
+        },
+        {
+          "title": "Rehau",
+          "logo": "/assets/images/developer/partners/REHAU_Logo.svg"
+        }]
 
 block meta
   title= title_page
@@ -88,11 +170,12 @@ block content
               <path d="M-4.12836e-07 10.4446L20 10.4446M20 10.4446L10 20.9997M20 10.4446L10 1" stroke="#E3EBF3" stroke-width="2"/>
               </svg>
         ul.developer-list
-          li.developer-list-item
-            img(src="./assets/images/developer/1.svg").img
-            .text
-              span 01
-              p Bobcat
+          each val, i in partners
+            li.developer-list-item
+              img(src='.'+val.logo).img
+              .text
+                span #{i}
+                p #{val.title}
           li.developer-list-item
             img(src="./assets/images/developer/2.svg").img
             .text
