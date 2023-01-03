@@ -29,3 +29,78 @@
     }
   }
 }
+
+
+.audio-play-button {
+  border-radius: 6px;
+  background-color: $dark;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 36px;
+  height: 36px;
+  z-index: 20;
+  transition: all .25s ease-out;
+  border: none;
+  svg:first-of-type {
+    opacity: 0;
+  }
+  // svg:last-of-type {
+  //   opacity: 1;
+  //   animation: fadeInRotate .25s ease-out 1;
+  // } 
+
+  &:hover {
+    background-color: $orange-light;
+  }
+  &.paused svg:last-of-type {
+    opacity: 1;
+    animation: fadeInRotate .2s ease-out 1;
+  } 
+
+  &.playing {
+    svg:first-of-type {
+      opacity: 1;
+      animation: fadeInRotateReverse .2s ease-out 1;
+    } 
+    svg:last-of-type {
+      opacity: 0;
+    } 
+  }
+  svg {
+    position: absolute;
+    width: 55%;
+    height: 55%;
+    left: 22.5%;
+    top: 22.5%;
+    fill: #fff;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+}
+
+
+audio {
+  display: none;
+}
+
+@keyframes fadeInRotate {
+  from {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes fadeInRotateReverse {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
