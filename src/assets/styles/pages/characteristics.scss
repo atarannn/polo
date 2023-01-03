@@ -3,13 +3,14 @@
   margin-bottom: var(--top-offset100);
   position: relative;
   .card-style {
+    height: 600px;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
     @include to(1180px) {
       height: 500px;
-      img {
-        width: 100%;
-        object-fit: cover;
-        object-position: top;
-      }
     }
     @include to(680px) {
       height: 360px;
@@ -143,6 +144,13 @@
   width: 100%;
   .card-style {
     width: 100%;
+    height: 600px;
+    @include to(1180px) {
+      height: 500px;
+    }
+    @include to(680px) {
+      height: 360px;
+    }
     &.bg-right {
       &:after {
         content: '';
