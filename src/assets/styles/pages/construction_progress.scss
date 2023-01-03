@@ -333,8 +333,10 @@
     @include from(1023px) {
       &:hover {
         .right {
+          overflow: hidden;
           img {
-            transform: scale(1.1);
+            border-radius: var(--border-radius-3);
+            transform: scale(1.1) translateZ(0);
             transition: transform .4s ease-in-out;
           }
         }
@@ -349,6 +351,7 @@
     .right {
       overflow: hidden;
       border-radius: var(--border-radius-3);
+      transform: translateZ(0);
       @include to(680px) {
         height: 60%;
       }
@@ -356,6 +359,8 @@
         height: 436px;
         border-radius: var(--border-radius-3);
         object-fit: cover;
+        overflow: hidden;
+        transform: translateZ(0);
         transition: transform .4s ease-in-out;
         @include to(1440px) {
           height: 360px;
