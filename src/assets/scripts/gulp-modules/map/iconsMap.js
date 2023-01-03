@@ -1,5 +1,7 @@
 import mainPin from '../../../images/map/logo.svg';
 import metroPin from '../../../images/map/metro.svg';
+import barPin from '../../../images/map/bar.svg';
+
 
 const ICON_NAMES = {
   main: 'main',
@@ -16,5 +18,5 @@ export const MAP_ICONS_NAME = {
 export const MARKER_ICONS = {
   [ICON_NAMES.main]: mainPin,
   [ICON_NAMES.metro]: metroPin,
-  [ICON_NAMES.bar]: metroPin,
+  [ICON_NAMES.bar]: barPin,
 };

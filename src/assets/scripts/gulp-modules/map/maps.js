@@ -23,7 +23,6 @@ async function initMap() {
   } catch (error) {
     console.warn(error);
   }
-
   const locations = markers.flatMap(item => item.list.map((marker) => {
     const { coordinations, name } = marker;
     return {

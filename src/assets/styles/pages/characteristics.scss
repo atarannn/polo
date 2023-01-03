@@ -217,10 +217,10 @@
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 20%;
+    max-width: 30%;
     z-index: 1;
     @include to(1180px) {
-      max-width: 35%;
+      max-width: 45%;
     }
     @include to(680px) {
       max-width: 60%;
