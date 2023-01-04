@@ -23,11 +23,12 @@ async function initMap() {
   } catch (error) {
     console.warn(error);
   }
-  const locations = markers.flatMap(item => item.list.map((marker) => {
+  const locations = markers.flatMap(item => item.list.map((marker, index) => {
     const { coordinations, name } = marker;
     return {
       type: item.code,
       title: name,
+      link: markers[index].svg ? markers[index].svg.url : null,
       coords: [coordinations.latitude, coordinations.elevation],
     };
   }));
@@ -53,14 +54,13 @@ async function initMap() {
   const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: "#E17427" } });
   const locationsWithMarkers = locations.map((item) => {
     const iconUrl = MARKER_ICONS[item.type];
-    console.log(item);
     const marker = new google.maps.Marker({
       position: {
         lat: +item.coords[0],
         lng: +item.coords[1],
       },
       map,
-      icon: iconUrl,
+      icon: item.link ? item.link : iconUrl,
       title: item.title,
     });
     marker.addListener('click', () => {
@@ -116,7 +116,8 @@ async function initMap() {
   const renderMapFilters = (markers) => {
     const filters = markers.map((marker) => {
       const { code, name } = marker;
-      return { svgName: MAP_ICONS_NAME[code], type: code, name };
+      const url = marker.svg ? marker.svg.url : null;
+      return { svgName: MAP_ICONS_NAME[code], type: code, name, url: url};
     });
     mapFiltersRef.innerHTML = mapsFiltersView(filters);
   };
