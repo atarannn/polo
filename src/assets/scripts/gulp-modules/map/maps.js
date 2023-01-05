@@ -28,7 +28,7 @@ async function initMap() {
     return {
       type: item.code,
       title: name,
-      link: markers[index].svg ? markers[index].svg.url : null,
+      link: markers[index].svgMarker ? markers[index].svgMarker.url : null,
       coords: [coordinations.latitude, coordinations.elevation],
     };
   }));
@@ -60,7 +60,10 @@ async function initMap() {
         lng: +item.coords[1],
       },
       map,
-      icon: item.link ? item.link : iconUrl,
+      icon: {
+        url: item.link ? item.link : iconUrl,
+        scaledSize: new google.maps.Size(40, 53)
+      },
       title: item.title,
     });
     marker.addListener('click', () => {
