@@ -23,12 +23,13 @@ async function initMap() {
   } catch (error) {
     console.warn(error);
   }
-  const locations = markers.flatMap(item => item.list.map((marker, index) => {
+  console.log(markers);
+  const locations = markers.flatMap((item, i) => item.list.map((marker, index) => {
     const { coordinations, name } = marker;
     return {
       type: item.code,
       title: name,
-      link: markers[index].svgMarker ? markers[index].svgMarker.url : null,
+      link: markers[i].svgMarker ? markers[i].svgMarker.url : null,
       coords: [coordinations.latitude, coordinations.elevation],
     };
   }));
