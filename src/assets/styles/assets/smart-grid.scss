@@ -456,15 +456,15 @@ $fields_ss: 10px;
     height: 100vh;
     position: fixed;
     width: 100%;
-    
+
     > div{
         height: inherit;
         @include wrapper();
-        
+
         > div{
             height: inherit;
             @include row-flex();
-            
+
             > div{
                 @include col();
                 @include size(1);
