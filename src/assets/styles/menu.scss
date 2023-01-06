@@ -70,6 +70,7 @@
       }
     }
   }
+
   &-list {
     display: flex;
     flex-direction: column;
@@ -84,6 +85,26 @@
     @include to(680px) {
       padding: 50px 20px;
     }
+    &::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 100%;
+      z-index: 101;
+      padding: 5% 10% 5% 0;
+      cursor: pointer;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(26, 30, 33, 1);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(250, 126, 38, 0.9);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(250, 126, 38, 1);
+    }
+
     li {
       margin-bottom: var(--offset50);
       display: flex;
