@@ -26,21 +26,21 @@
       gap: var(--offset20);
       .day {
         @include font-regular;
-        color: $dark;
+        color: $light;
         font-size: var(--font128);
         line-height: 90%;
         text-transform: uppercase;
       }
       .month {
         @include font-medium;
-        color: $dark;
+        color: $light;
         font-size: var(--font24);
         line-height: 140%;
         text-transform: uppercase;
       }
       .year {
         @include font-medium;
-        color: $dark;
+        color: $light;
         font-size: var(--font18);
         line-height: 140%;
         text-transform: uppercase;
@@ -48,7 +48,7 @@
     }
     .text {
       @include font-regular;
-      color: $dark;
+      color: $grey;
       font-size: var(--font18);
       line-height: 120%;
       margin: 16px 0;
@@ -63,7 +63,7 @@
         align-items: center;
         justify-content: flex-start;
         @include font-medium;
-        color: $dark;
+        color: $light;
         font-size: var(--font18);
         line-height: 140%;
         p {
@@ -79,11 +79,11 @@
     }
   }
   .swiper {
-    background: $wc;
+    background: transparent;
+    border: 1px solid rgba(46, 50, 55, 1);
     border-radius: var(--border-radius-2);
     overflow: hidden;
     padding: var(--offset32);
-    width: auto;
     box-sizing: inherit;
     position: relative;
     width: 100%;
@@ -95,7 +95,7 @@
       height: 80px;
       width: 80px;
       border-radius: 100%;
-      background: $dark;
+      background: $wc;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -112,12 +112,17 @@
         top: var(--offset20);
       }
       svg {
-        stroke: $light;
+        stroke: $dark;
+        transition: stroke .3s ease-in-out;
       }
       @include from(1023px) {
         &:hover {
           background: $orange-light;
           transition: background .3s ease-in-out;
+          svg {
+            stroke: $light;
+            transition: stroke .3s ease-in-out;
+          }
         }
       }
     }
@@ -316,7 +321,8 @@
   }
   .construction_progress-card {
     border-radius: var(--border-radius-3);
-    background: $wc;
+    background: transparent;
+    border: 1px solid rgba(46, 50, 55, 1);
     height: 500px;
     display: flex;
     align-items: center;

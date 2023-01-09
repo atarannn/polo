@@ -10,7 +10,8 @@
   gap: var(--offset20);
   .document {
     border-radius: var(--border-radius-3);
-    background: $wc;
+    background: transparent;
+    border: 1px solid rgba(46, 50, 55, 1);
     width: 100%;
     height: auto;
     padding: var(--offset32);
@@ -20,7 +21,7 @@
     &-name {
       @include font-medium;
       font-size: var(--font24);
-      color: $dark;
+      color: $light;
       line-height: 120%;
       text-transform: uppercase;
     }
@@ -32,7 +33,7 @@
       span {
         @include font-medium;
         font-size: var(--font14);
-        color: $dark;
+        color: $light;
         line-height: 120%;
       }
       &-btn {

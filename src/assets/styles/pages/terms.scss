@@ -24,7 +24,8 @@
     align-items: flex-start;
     justify-content: space-between;
     border-radius: var(--border-radius-2);
-    background: $wc;
+    background: transparent;
+    border: 1px solid rgba(46, 50, 55, 1);
     padding: var(--offset32);
     gap: var(--offset20);
     height: 600px;
@@ -52,14 +53,14 @@
     }
     .title-dark {
       @include font-light;
-      color: $dark;
+      color: #C0D1E1;
       line-height: 120%;
       font-size: var(--font72);
     }
     .text-dark {
       @include font-regular;
       font-size: var(--font20);
-      color: $dark;
+      color: $grey;
       line-height: 120%;
       margin-top: 16px;
     }
