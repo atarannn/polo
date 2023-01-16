@@ -106,18 +106,25 @@
     }
 
     li {
-      margin-bottom: var(--offset50);
+      --link-fz: 6vh;
+      --link-offset: calc(var(--link-fz) * 0.38);
+      @include to(600px){
+        --link-fz: var(--font96);
+        --link-offset: var(--offset50);
+      }
+      margin-bottom: var(--link-offset);
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
       z-index: 1;
+
       .menu-img {
         display: none;
       }
       a {
         @include font-regular;
         color: $light;
-        font-size: var(--font96);
+        font-size: var(--link-fz);
         line-height: 90%;
         span {
           color: $grey;
