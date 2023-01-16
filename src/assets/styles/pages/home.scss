@@ -212,6 +212,9 @@
       font-size: var(--font14);
       width: 40%;
       text-align: center;
+      @include from(1181px){
+        font-size: 24px;
+      }
       @include to(1080px) {
         width: 60%;
       }
