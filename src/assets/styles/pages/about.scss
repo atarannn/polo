@@ -11,3 +11,35 @@
     margin-bottom: var(--top-offset100);
   }
 }
+
+#id-page-developer,
+#id-page-about {
+  @include to(1180px){
+    .img-wrapper {
+      width: 100%;
+    }
+  }
+  @include from(1181px){
+    .developer-other-projects-list-item,
+    .about-page-list-item {
+      .img-wrapper {
+        width: 57%;
+        .img-wrapper-container {
+          position: relative;
+          padding-bottom: 86%;
+        }
+        .img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .border-style {
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
