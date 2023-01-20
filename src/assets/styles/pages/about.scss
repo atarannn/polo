@@ -20,10 +20,13 @@
     }
   }
   @include from(1181px){
+    .img-wrapper {
+      width: 57%;
+    }
+  }
     .developer-other-projects-list-item,
     .about-page-list-item {
       .img-wrapper {
-        width: 57%;
         .img-wrapper-container {
           position: relative;
           padding-bottom: 86%;
@@ -41,5 +44,4 @@
         }
       }
     }
-  }
 }
