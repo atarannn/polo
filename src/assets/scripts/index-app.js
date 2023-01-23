@@ -16,7 +16,7 @@ global.axios = axios;
 const isDev = document.documentElement.dataset.mode === 'dev';
 
 window.addEventListener('menu-open', () => {
-  
+
   if(document.documentElement.clientWidth > 1180) {
     motionHoverEffect(
       document.querySelector('.menu'),
@@ -28,25 +28,25 @@ window.addEventListener('menu-open', () => {
 var myAnimation = new hoverEffect({
   parent: document.querySelector('#about .about-left.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: isDev ? './assets/images/home/section-2/1.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1.jpg',
-  image2: isDev ? './assets/images/home/section-2/1-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-hover.jpg',
-  displacementImage: isDev ? './assets/images/home/section-2/1-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/1-hover.jpg'
+  image1: isDev ? './assets/images/home/section-2/1.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/1.jpg',
+  image2: isDev ? './assets/images/home/section-2/1-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/1-hover.jpg',
+  displacementImage: isDev ? './assets/images/home/section-2/1-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/1-hover.jpg'
 });
 
 var myAnimation2 = new hoverEffect({
   parent: document.querySelector('#about .about-right.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: isDev ? './assets/images/home/section-2/2.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2.jpg',
-  image2: isDev ? './assets/images/home/section-2/2-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-hover.jpg',
-  displacementImage: isDev ? './assets/images/home/section-2/2-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-2/2-hover.jpg'
+  image1: isDev ? './assets/images/home/section-2/2.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/2.jpg',
+  image2: isDev ? './assets/images/home/section-2/2-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/2-hover.jpg',
+  displacementImage: isDev ? './assets/images/home/section-2/2-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-2/2-hover.jpg'
 });
 
 var myAnimation2 = new hoverEffect({
   parent: document.querySelector('#about-2 .about-right.card-style.js-hover-card-animation'),
   intensity: 0.3,
-  image1: isDev ? './assets/images/home/section-5/2.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2.jpg',
-  image2: isDev ? './assets/images/home/section-5/2-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2-hover.jpg',
-  displacementImage: isDev ? './assets/images/home/section-5/2-hover.jpg' : 'https://polo-construction-wp.smarto.com.ua/wp-content/themes/3d/assets/images/home/section-5/2-hover.jpg'
+  image1: isDev ? './assets/images/home/section-5/2.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-5/2.jpg',
+  image2: isDev ? './assets/images/home/section-5/2-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-5/2-hover.jpg',
+  displacementImage: isDev ? './assets/images/home/section-5/2-hover.jpg' : 'https://polosignature.ge/wp-content/themes/3d/assets/images/home/section-5/2-hover.jpg'
 });
 
 const form = [
