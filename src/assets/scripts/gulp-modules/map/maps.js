@@ -4,7 +4,7 @@ import { MARKER_ICONS, MAP_ICONS_NAME } from './iconsMap';
 import { mapsFiltersView } from './mapsFiltersView';
 
 // const mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDa7y9eC6NQJRPQRcmTamcqoFgNv6MK1Qo&ver=1655409542';
-const mapSrc = 'https://maps.googleapis.com/maps/api/js';
+const mapSrc = window.location.href.match(/polosignature/) ? 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDa7y9eC6NQJRPQRcmTamcqoFgNv6MK1Qo&ver=1655409542' : 'https://maps.googleapis.com/maps/api/js';
 
 const mapScript = document.createElement('script');
 mapScript.src = mapSrc;
