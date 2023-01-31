@@ -38,19 +38,20 @@ async function initMap() {
     coords: [41.610250, 41.637001],
     name: 'Polo',
   };
-  const uluru = { lat: +mainMarker.coords[0], lng: +mainMarker.coords[1] };
+  const uluru = { lat: +locations[0].coords[0], lng: +locations[0].coords[1] };
   const infoWindow = new google.maps.InfoWindow();
   const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 15,
     center: uluru,
     styles: mapStyles,
+    maxZoom: 15
   });
   window.googleMap = map;
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map,
-    icon: MARKER_ICONS.main,
-  });
+  // const marker = new google.maps.Marker({
+  //   position: uluru,
+  //   map,
+  //   icon: MARKER_ICONS.main,
+  // });
   const DIRECTIONS_SERVIE = new google.maps.DirectionsService();
   const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ map, polylineOptions: { strokeColor: "#E17427" } });
   const locationsWithMarkers = locations.map((item) => {
@@ -61,9 +62,10 @@ async function initMap() {
         lng: +item.coords[1],
       },
       map,
+      zIndex: item.type === 'main' ? 2 : 1,
       icon: {
         url: item.link ? item.link : iconUrl,
-        scaledSize: new google.maps.Size(40, 53)
+        scaledSize: item.type === 'main' ? new google.maps.Size(60, 79.5) : new google.maps.Size(40, 53)
       },
       title: item.title,
     });
@@ -74,16 +76,19 @@ async function initMap() {
     });
 
     google.maps.event.addListener(marker, 'click', function (evbt) {
-      DIRECTIONS_SERVIE.route({
-        origin: new google.maps.LatLng(mainMarker.coords[0], mainMarker.coords[1]),
-        destination: new google.maps.LatLng(item.coords[0], item.coords[1]),
-        travelMode: google.maps.TravelMode.DRIVING,
-        avoidTolls: true,
-      }, (res, status) => {
-        console.log(res);
-        console.log(status);
-        DIRECTIONS_RENDERER.setDirections(res);
-      });
+      const isItemCordsDifferentToMainMarker = locations[0].coords[0] !== item.coords[0] && locations[0].coords[1] !== item.coords[1]
+      if (isItemCordsDifferentToMainMarker) {
+        DIRECTIONS_SERVIE.route({
+          origin: new google.maps.LatLng(locations[0].coords[0], locations[0].coords[1]),
+          destination: new google.maps.LatLng(item.coords[0], item.coords[1]),
+          travelMode: google.maps.TravelMode.DRIVING,
+          avoidTolls: true,
+        }, (res, status) => {
+          console.log(res);
+          console.log(status);
+          DIRECTIONS_RENDERER.setDirections(res);
+        });
+      }
 
       infoWindow.setContent(marker.getTitle());
       infoWindow.open(marker.getMap(), marker);
@@ -108,7 +113,7 @@ async function initMap() {
     }
 
     return locationsWithMarkers.filter((location) => {
-      if (location.type === type) {
+      if (location.type === type || location.type === 'main') {
         location.marker.setMap(map);
       } else {
         location.marker.setMap(null);
